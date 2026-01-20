@@ -8,17 +8,16 @@ extends CharacterBody3D
 @onready var shooting_point: Node3D = $ShootingPoint
 
 # Isometric direction conversion
-# WASD maps to diagonal world directions
 var iso_forward := Vector3(-1, 0, -1).normalized()
 var iso_back := Vector3(1, 0, 1).normalized()
 var iso_left := Vector3(-1, 0, 1).normalized()
 var iso_right := Vector3(1, 0, -1).normalized()
 
-var current_aim_direction := Vector3.FORWARD
+var aim_direction := Vector3.FORWARD
 
 func _physics_process(delta: float) -> void:
 	handle_movement()
-	handle_rotation()
+	handle_aim()
 	move_and_slide()
 
 func handle_movement() -> void:
@@ -36,31 +35,42 @@ func handle_movement() -> void:
 	input_dir = input_dir.normalized()
 	velocity.x = input_dir.x * move_speed
 	velocity.z = input_dir.z * move_speed
+
+
+func handle_aim() -> void:
+	var camera := get_viewport().get_camera_3d()
+	if camera == null:
+		return
 	
-	# Store direction for aiming
-	if input_dir != Vector3.ZERO:
-		current_aim_direction = input_dir
-
-
-func handle_rotation() -> void:
-	# Rotate player to face movement direction
-	if velocity.length() > 0.1:
-		var target_rotation := atan2(velocity.x, velocity.z)
-		rotation.y = lerp_angle(rotation.y, target_rotation, 0.2)
-
+	var mouse_pos := get_viewport().get_mouse_position()
+	
+	# Create a plane at player's Y position
+	var plane := Plane(Vector3.UP, global_position.y)
+	
+	# Cast ray from camera through mouse position
+	var ray_origin := camera.project_ray_origin(mouse_pos)
+	var ray_dir := camera.project_ray_normal(mouse_pos)
+	
+	var intersect = plane.intersects_ray(ray_origin, ray_dir)
+	if intersect:
+		var look_pos = intersect
+		look_pos.y = global_position.y
+		
+		# Calculate direction and rotate player
+		aim_direction = (look_pos - global_position).normalized()
+		if aim_direction.length() > 0.1:
+			rotation.y = atan2(aim_direction.x, aim_direction.z)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):
 		shoot()
 
-
 func shoot() -> void:
 	if bullet_scene == null:
-		print("No bullet scene assigned!")
+		print("Bang! (no bullet scene assigned)")
 		return
 	
 	var bullet = bullet_scene.instantiate()
 	get_tree().root.add_child(bullet)
 	bullet.global_position = shooting_point.global_position
-	bullet.direction = current_aim_direction
-	print("Bang!")
+	bullet.direction = aim_direction

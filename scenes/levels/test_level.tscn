@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc3nrto6h6374"]
+[gd_scene load_steps=7 format=3 uid="uid://dc3nrto6h6374"]
 
 [ext_resource type="PackedScene" uid="uid://qxin0n6vbcb7" path="res://scenes/player/player.tscn" id="1_jbqir"]
-[ext_resource type="PackedScene" uid="uid://dpumo2pm1yuxh" path="res://art/glbtf/SpermPlayer.glb" id="2_yautc"]
+[ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_yautc"]
+[ext_resource type="PackedScene" uid="uid://dpumo2pm1yuxh" path="res://art/glbtf/SpermPlayer.glb" id="3_sperm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbqir"]
 albedo_color = Color(1, 0.7529412, 0.79607844, 1)
@@ -18,10 +19,12 @@ size = Vector3(20, 0.2, 20)
 [node name="Player" parent="." instance=ExtResource("1_jbqir")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("target")]
 transform = Transform3D(0.70710677, -0.4055798, 0.579228, 0, 0.81915206, 0.57357645, -0.70710677, -0.4055798, 0.579228, 5, 5, 5)
 projection = 1
 size = 10.0
+script = ExtResource("2_yautc")
+target = NodePath("../Player")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
@@ -35,5 +38,5 @@ mesh = SubResource("PlaneMesh_yautc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_fr1um")
 
-[node name="SpermPlayer" parent="." instance=ExtResource("2_yautc")]
+[node name="SpermPlayer" parent="." instance=ExtResource("3_sperm")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.8223057, 1.0749278, 4.0396748)
