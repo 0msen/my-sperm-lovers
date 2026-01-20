@@ -14,8 +14,9 @@ var iso_left := Vector3(-1, 0, 1).normalized()
 var iso_right := Vector3(1, 0, -1).normalized()
 
 var aim_direction := Vector3.FORWARD
+var is_aiming := false
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	handle_movement()
 	handle_aim()
 	move_and_slide()
@@ -32,12 +33,18 @@ func handle_movement() -> void:
 	if Input.is_action_pressed("move_right"):
 		input_dir += iso_right
 	
+	# Use half of speed when aiming
 	input_dir = input_dir.normalized()
-	velocity.x = input_dir.x * move_speed
-	velocity.z = input_dir.z * move_speed
+	var current_speed := move_speed * (0.5 if is_aiming else 1.0)
+	
+	velocity.x = input_dir.x * current_speed
+	velocity.z = input_dir.z * current_speed
 
 
 func handle_aim() -> void:
+	# Check if right mouse button is held
+	is_aiming = Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)
+	
 	var camera := get_viewport().get_camera_3d()
 	if camera == null:
 		return
@@ -62,7 +69,7 @@ func handle_aim() -> void:
 			rotation.y = atan2(aim_direction.x, aim_direction.z)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot"):
+	if event.is_action_pressed("shoot") and is_aiming:
 		shoot()
 
 func shoot() -> void:

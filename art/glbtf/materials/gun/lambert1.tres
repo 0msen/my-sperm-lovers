@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c11pthrcdt8gm"]
+
+[ext_resource type="Texture2D" uid="uid://cweamiphu6qsj" path="res://art/glbtf/materials/gun/gun_Image_0.png" id="1_djp7k"]
+
+[resource]
+resource_name = "lambert1"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_djp7k")
+texture_filter = 2

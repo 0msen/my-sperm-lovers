@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://qxin0n6vbcb7"]
+[gd_scene load_steps=8 format=3 uid="uid://qxin0n6vbcb7"]
 
 [ext_resource type="Script" uid="uid://dlbvddyy2ax2w" path="res://scripts/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://dpumo2pm1yuxh" path="res://art/glbtf/SpermPlayer.glb" id="2_dovo2"]
-[ext_resource type="PackedScene" uid="uid://d1ofmfucyb25p" path="res://scenes/player/bullet.tscn" id="2_gmlin"]
+[ext_resource type="PackedScene" uid="uid://oc1dg0chp34e" path="res://art/glbtf/Gun.glb" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://j6katki2lo5b" path="res://scripts/gun.gd" id="4_lvxji"]
+[ext_resource type="PackedScene" uid="uid://d1ofmfucyb25p" path="res://scenes/player/bullet.tscn" id="5_bullet"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dovo2"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8afob")
-bullet_scene = ExtResource("2_gmlin")
+bullet_scene = ExtResource("5_bullet")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_dovo2")
@@ -19,3 +21,7 @@ visible = false
 [node name="SpermPlayer" parent="." instance=ExtResource("2_dovo2")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0, 0, 0.14251202)
 rotation_order = 0
+
+[node name="Gun" parent="." instance=ExtResource("3_gmlin")]
+transform = Transform3D(2.4614089, -0.551277, -1.4446579, 0, 4.4771943, -0.53009063, 1.7492322, 0.77572215, 2.0328312, 0.30225283, 0.67845654, 0.40896508)
+script = ExtResource("4_lvxji")
