@@ -73,11 +73,15 @@ func _input(event: InputEvent) -> void:
 		shoot()
 
 func shoot() -> void:
+	print("Shoot function called!")  # Add this line
+	
 	if bullet_scene == null:
 		print("Bang! (no bullet scene assigned)")
 		return
 	
+	print("Spawning bullet...")  # Add this line
 	var bullet = bullet_scene.instantiate()
 	get_tree().root.add_child(bullet)
 	bullet.global_position = shooting_point.global_position
 	bullet.direction = aim_direction
+	print("Bullet spawned at: ", shooting_point.global_position)  # Add this line
