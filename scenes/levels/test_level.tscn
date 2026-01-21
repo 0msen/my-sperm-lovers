@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc3nrto6h6374"]
+[gd_scene load_steps=8 format=3 uid="uid://dc3nrto6h6374"]
 
 [ext_resource type="PackedScene" uid="uid://qxin0n6vbcb7" path="res://scenes/player/player.tscn" id="1_jbqir"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_yautc"]
 [ext_resource type="PackedScene" uid="uid://hy4mbrybw7mr" path="res://scenes/enemies/sibling_sperm.tscn" id="3_fr1um"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/white_blood_cell.tscn" id="4_v45ci"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbqir"]
 albedo_color = Color(1, 0.7529412, 0.79607844, 1)
@@ -52,3 +53,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.160266, 0.6000004, -1.1343
 
 [node name="SiblingSperm5" parent="." instance=ExtResource("3_fr1um")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.619813, 0.6000004, 2.3967142)
+
+[node name="SiblingSperm6" parent="." instance=ExtResource("3_fr1um")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8252249, 0.58746433, -5.6423254)
+
+[node name="SiblingSperm7" parent="." instance=ExtResource("3_fr1um")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3692603, 0.58746433, 8.431741)
+
+[node name="SiblingSperm8" parent="." instance=ExtResource("3_fr1um")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7059326, 0.58746433, 2.8370275)
+
+[node name="WhiteBloodCell" parent="." instance=ExtResource("4_v45ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.166957, 0.6000004, 6.8519077)
+
+[node name="WhiteBloodCell2" parent="." instance=ExtResource("4_v45ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2003841, 0.6000004, 1.3232608)
+
+[node name="WhiteBloodCell3" parent="." instance=ExtResource("4_v45ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6735353, 0.60000134, 4.2136025)
+
+[node name="WhiteBloodCell4" parent="." instance=ExtResource("4_v45ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8921041, 0.6000004, -4.8484015)
