@@ -38,12 +38,14 @@ func _physics_process(_delta: float) -> void:
 	var base_velocity := Vector3.ZERO
 
 	if is_chasing and is_instance_valid(current_target):
-		var dist_to_target = global_position.distance_to(current_target.global_position)
+		# Use horizontal distance only (ignore Y height difference)
+		var horizontal_diff = current_target.global_position - global_position
+		horizontal_diff.y = 0
+		var dist_to_target = horizontal_diff.length()
 
 		# Only move if not within stop distance
 		if dist_to_target > stop_distance:
-			var direction = (current_target.global_position - global_position).normalized()
-			direction.y = 0
+			var direction = horizontal_diff.normalized()
 			base_velocity = direction * chase_speed
 	else:
 		# PATROL state: wander around
@@ -87,10 +89,13 @@ func get_separation_from_other_wbcs() -> Vector3:
 		if entity.has_method("become_aggro"):
 			continue
 
-		var dist = global_position.distance_to(entity.global_position)
+		# Use horizontal distance only
+		var horizontal_diff = global_position - entity.global_position
+		horizontal_diff.y = 0
+		var dist = horizontal_diff.length()
+
 		if dist < separation_radius and dist > 0.01:
-			var away_dir = (global_position - entity.global_position).normalized()
-			away_dir.y = 0
+			var away_dir = horizontal_diff.normalized()
 			# Stronger push when closer
 			separation += away_dir * (separation_force * (1.0 - dist / separation_radius))
 
@@ -101,10 +106,12 @@ func detect_targets() -> void:
 	var nearest_target: Node3D = null
 	var nearest_distance: float = detection_range
 
-	# Check for player
+	# Check for player (use horizontal distance only)
 	var player = get_tree().get_first_node_in_group("player")
 	if player and is_instance_valid(player):
-		var dist = global_position.distance_to(player.global_position)
+		var horizontal_diff = player.global_position - global_position
+		horizontal_diff.y = 0
+		var dist = horizontal_diff.length()
 		if dist < nearest_distance:
 			nearest_distance = dist
 			nearest_target = player
@@ -115,7 +122,9 @@ func detect_targets() -> void:
 			continue
 		if not entity.has_method("become_aggro"):
 			continue  # Skip other white blood cells
-		var dist = global_position.distance_to(entity.global_position)
+		var horizontal_diff = entity.global_position - global_position
+		horizontal_diff.y = 0
+		var dist = horizontal_diff.length()
 		if dist < nearest_distance:
 			nearest_distance = dist
 			nearest_target = entity

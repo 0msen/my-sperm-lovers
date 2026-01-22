@@ -319,7 +319,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07938719, 1.1259284, -7.1576486)
 
 [node name="SiblingSperm2" parent="." instance=ExtResource("3_fr1um")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9690824, 0.5999994, -4.2736645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9690824, 0.8715956, -4.2736645)
 
 [node name="WhiteBloodCell" parent="." instance=ExtResource("4_v45ci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0713403, 1.6586838, -9.263895)
