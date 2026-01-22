@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://cp1bxee5f4qaa" path="res://scripts/sibling_sperm.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://41b2353bfoi4" path="res://art/glbtf/SpermEnemy.glb" id="2_model"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_jpkcg"]
-radius = 0.3
+[sub_resource type="SphereShape3D" id="SphereShape3D_gysa7"]
 
 [node name="SiblingSperm" type="CharacterBody3D"]
 collision_layer = 2
 script = ExtResource("1_script")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_jpkcg")
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_gysa7")
 
 [node name="SpermEnemy" parent="." instance=ExtResource("2_model")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

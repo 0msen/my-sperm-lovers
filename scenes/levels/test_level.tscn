@@ -1,10 +1,11 @@
-[gd_scene load_steps=33 format=4 uid="uid://dc3nrto6h6374"]
+[gd_scene load_steps=35 format=4 uid="uid://dc3nrto6h6374"]
 
 [ext_resource type="Script" uid="uid://c2vv85mquw12b" path="res://scripts/secret_ending.gd" id="1_2mu0v"]
 [ext_resource type="PackedScene" uid="uid://qxin0n6vbcb7" path="res://scenes/player/player.tscn" id="1_jbqir"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_yautc"]
 [ext_resource type="PackedScene" uid="uid://hy4mbrybw7mr" path="res://scenes/enemies/sibling_sperm.tscn" id="3_fr1um"]
 [ext_resource type="Script" uid="uid://cofp6hemc4wv8" path="res://scripts/next_zone_enabler.gd" id="3_os2yb"]
+[ext_resource type="PackedScene" uid="uid://ciluydixohjfm" path="res://scenes/Door/abstract_door.tscn" id="4_upsmr"]
 [ext_resource type="PackedScene" uid="uid://bj7gawixh3dxo" path="res://scenes/enemies/white_blood_cell.tscn" id="4_v45ci"]
 [ext_resource type="Texture2D" uid="uid://c0xigj7fpr2oc" path="res://art/textures/tileset.png" id="7_hfwtw"]
 [ext_resource type="Script" uid="uid://c2lxt2vjdjb4b" path="res://addons/TileMapLayer3D/nodes/static_collision_body.gd" id="8_hfwtw"]
@@ -17,6 +18,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b11gld1jjcw3y" path="res://art/glbtf/designsGlb/3dmeshes/FAB_Lamp.res" id="15_3ay3b"]
 [ext_resource type="ArrayMesh" uid="uid://b5ttlbna42lla" path="res://art/glbtf/designsGlb/3dmeshes/FAB_Welcome.res" id="16_hppjq"]
 [ext_resource type="ArrayMesh" uid="uid://c642jqt64ckbf" path="res://art/glbtf/designsGlb/3dmeshes/FAB_table.res" id="16_os2yb"]
+[ext_resource type="PackedScene" uid="uid://c6sr2w4xbnhs6" path="res://scenes/dialogSystem/dialog_system.tscn" id="18_v6k17"]
 
 [sub_resource type="Environment" id="Environment_hfwtw"]
 background_mode = 1
@@ -145,10 +147,17 @@ light_color = Color(0.99999994, 0.9782172, 0.9291647, 1)
 light_energy = 3.0
 omni_range = 7.206023
 
+[node name="AbstractDoor" parent="." instance=ExtResource("4_upsmr")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0.5911617, 1.474934, -16.7337)
+auto_chain_dialog_id = "DoorethyL0_0"
+
 [node name="SecretZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7255995, 1.4062264, 6.462715)
 disable_mode = 2
 script = ExtResource("1_2mu0v")
+dialogue_canvas_path = NodePath("DialogSystem")
+
+[node name="DialogSystem" parent="SecretZone" instance=ExtResource("18_v6k17")]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="SecretZone"]
 transform = Transform3D(1, 0, 0, 0, 0.3665012, 0.9304176, 0, -0.9304176, 0.3665012, 0.33370256, 6.0119905, 2.0544615)

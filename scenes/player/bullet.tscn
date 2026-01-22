@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://l2cwtedexpk8" path="res://scripts/bullet.gd" id="1_2as5g"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2as5g"]
-radius = 0.12597656
+radius = 0.2
 height = 1.823
 
 [sub_resource type="SphereMesh" id="SphereMesh_2as5g"]

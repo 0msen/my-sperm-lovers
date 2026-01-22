@@ -23,6 +23,8 @@ var aim_direction := Vector3.FORWARD
 var is_aiming := false
 var can_shoot := true
 
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 
 func _physics_process(delta: float) -> void:
 	handle_aiming_input()

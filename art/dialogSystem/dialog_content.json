@@ -1,0 +1,45 @@
+{
+  "SecretZone0": {
+	"name": "[REDACTED]",
+	"text": ".......",
+	"next": "SecretZone1"
+  },
+  "SecretZone1": {
+	"name": "[REDACTED]",
+	"text": "There's a very luminous light."
+  },
+  "Doorethy0": {
+	"name": "Doorethy",
+	"text": "Wait... where are you going?",
+	"next": "Doorethy1"
+  },
+  "Doorethy1": {
+	"name": "Doorethy",
+	"text": "The egg is THAT way???",
+	"next": "Doorethy2"
+  },
+  "Doorethy2": {
+	"name": "Doorethy",
+	"text": "You're not supposed to - HEY!"
+  },
+
+  "DoorethyL0_0": {
+	"name": "Doorethy",
+	"text": "Oh! A new one! Hi hi! ^^",
+	"next": "DoorethyL0_1"
+  },
+  "DoorethyL0_1": {
+	"name": "Doorethy",
+	"text": "I'm Doorethy! I'm supposed to stop you but... that sounds like work.",
+	"next": "DoorethyL0_2"
+  },
+  "DoorethyL0_2": {
+	"name": "Doorethy",
+	"text": "How about a deal? Kill everyone here and I'll let you through~",
+	"next": "DoorethyL0_3"
+  },
+  "DoorethyL0_3": {
+	"name": "Doorethy",
+	"text": "OR solve my little puzzle and I'll... handle it myself. uwu"
+  }
+}

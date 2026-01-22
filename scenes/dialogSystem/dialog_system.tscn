@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6sr2w4xbnhs6"]
+
+[ext_resource type="Script" uid="uid://3gmosgfcxbfx" path="res://scripts/dialog_system.gd" id="1_30pih"]
+
+[node name="DialogSystem" type="CanvasLayer"]
+editor_description = "refer to the sript of the SecetZone sa test_level.tscn, naa dadto gi pag pag gamit ani na scene/tool
+
+DialogueCanvas Scene Usage:
+- Drag this scene into to such level.
+- Assign a JSON file with dialogue blocks (we have a json already).
+- Call start_dialogue(block_id) from triggers (Area3D/NPC).
+
+What is shitty about developing the dialogue sa godot, is that u need to manually code the logic sa dialogue"
+
+[node name="ControlNode" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_30pih")
+jsonsrc = "res://art/dialogSystem/dialog_content.json"
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogBox" type="Panel" parent="ControlNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 43.6
+anchor_top = 6.225
+anchor_right = 43.6
+anchor_bottom = 6.225
+offset_left = -1679.0
+offset_top = 11.0
+offset_right = -1179.0
+offset_bottom = 111.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="RichTextLabel" parent="ControlNode/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12999998
+anchor_top = 0.05
+anchor_right = 0.13
+anchor_bottom = 0.05
+offset_left = -59.0
+offset_right = 41.0
+offset_bottom = 40.000004
+metadata/_edit_use_anchors_ = true
+
+[node name="TextLabel" type="RichTextLabel" parent="ControlNode/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.658
+anchor_top = 0.41
+anchor_right = 0.658
+anchor_bottom = 0.41
+offset_left = -329.0
+offset_top = -11.0
+offset_right = 171.0
+offset_bottom = 29.0
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
