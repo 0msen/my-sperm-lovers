@@ -38,5 +38,6 @@ stream = ExtResource("7_0owmy")
 
 [node name="HPBar" parent="." instance=ExtResource("8_hpbar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-bar_color = Color(0.2, 0.8, 0.2, 1)
+fill_color = Color(0.5, 0.75, 0.25, 1)
+background_color = Color(0.5, 0.13, 0.13, 1)
 always_visible = true

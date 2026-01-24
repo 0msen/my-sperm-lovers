@@ -10,7 +10,7 @@ script = ExtResource("1_script")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
-size = Vector2i(100, 12)
+size = Vector2i(64, 16)
 
 [node name="ProgressBar" type="ProgressBar" parent="SubViewport"]
 anchors_preset = 15
