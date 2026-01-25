@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://c1ik22b8i70y5"]
+[gd_scene load_steps=64 format=4 uid="uid://c1ik22b8i70y5"]
 
 [ext_resource type="Script" uid="uid://4kv8f8ejgwqn" path="res://addons/TileMapLayer3D/nodes/tilemap_layer_3d.gd" id="1_dd0lh"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="1_dywbp"]
