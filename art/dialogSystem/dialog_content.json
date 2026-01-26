@@ -9,6 +9,11 @@
 	"text": "There's a very luminous light."
   },
 
+  "DevWelcomeL1": {
+	"name": "Dev Team",
+	"text": "Approach and talk with Doorethy."
+  },
+
   "Doorethy0": {
 	"name": "Doorethy",
 	"text": "Wait... where are you going?",
