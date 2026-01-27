@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://qxin0n6vbcb7" path="res://scenes/player/player.tscn" id="1_jbqir"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_yautc"]
 [ext_resource type="PackedScene" uid="uid://hy4mbrybw7mr" path="res://scenes/enemies/sibling_sperm.tscn" id="3_fr1um"]
-[ext_resource type="Script" uid="uid://cofp6hemc4wv8" path="res://scripts/next_zone_enabler.gd" id="3_os2yb"]
+[ext_resource type="Script" path="res://scripts/next_zone_enabler.gd" id="3_os2yb"]
 [ext_resource type="PackedScene" uid="uid://ciluydixohjfm" path="res://scenes/abstract_door.tscn" id="4_upsmr"]
 [ext_resource type="PackedScene" uid="uid://bj7gawixh3dxo" path="res://scenes/enemies/white_blood_cell.tscn" id="4_v45ci"]
 [ext_resource type="PackedScene" uid="uid://c1ik22b8i70y5" path="res://scenes/levels/level1.tscn" id="6_qgrpf"]
