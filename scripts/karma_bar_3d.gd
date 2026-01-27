@@ -20,7 +20,13 @@ func _ready() -> void:
 	_create_segments()
 	if GameManager:
 		GameManager.karma_updated.connect(_on_karma_updated)
-	_update_display(0, 0.0, true)
+		# Initialize with current karma state (persists across levels)
+		var level = GameManager.get_karma_level()
+		var progress = GameManager.get_karma_progress()
+		var is_pos = GameManager.raw_karma >= 0.0
+		_update_display(level, progress, is_pos)
+	else:
+		_update_display(0, 0.0, true)
 
 
 func _create_segments() -> void:
