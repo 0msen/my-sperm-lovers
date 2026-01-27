@@ -32,6 +32,7 @@ var last_position: Vector3
 
 # Shoot-to-talk support
 var player_in_hitbox: bool = false
+var is_dead: bool = false
 
 # Node references
 @onready var attack_hitbox: Area3D = $AttackHitbox
@@ -213,16 +214,19 @@ func become_aggro() -> void:
 		GameManager.on_enemy_aggro()
 
 func die() -> void:
+	if is_dead: return  # Prevent double-death from multiple pellets in same frame
+	is_dead = true
 	print("Sibling died!")
-	if GameManager:
-		GameManager.add_karma_xp(-10.0)  # Bad action: -10 XP
-		if is_aggro:
-			GameManager.on_enemy_died()
-	# Wake nearby siblings so the whole group reacts
+	# Wake nearby siblings FIRST so they become aggro before we decrement the count
 	var all_enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in all_enemies:
 		if enemy != self and enemy.has_method("_on_nearby_violence"):
 			enemy._on_nearby_violence(global_position)
+	# Now notify GameManager (karma and aggro count)
+	if GameManager:
+		GameManager.add_karma_xp(-10.0)  # Bad action: -10 XP
+		if is_aggro:
+			GameManager.on_enemy_died()
 	queue_free()
 
 func check_continuous_attack() -> void:
