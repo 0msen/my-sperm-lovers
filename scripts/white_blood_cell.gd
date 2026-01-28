@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const DeathSplash = preload("res://scenes/effects/death_splash.tscn")
+
 # Exported variable
 @export var static_mode: bool = false
 @export var move_speed: float = 1.5
@@ -207,6 +209,12 @@ func die() -> void:
 	if is_dead: return  # Prevent double-death from multiple pellets in same frame
 	is_dead = true
 	print("White blood cell died!")
+	# Spawn death effect
+	var splash = DeathSplash.instantiate()
+	splash.set_color(Color(0.95, 0.95, 0.9))  # Off-white for white blood cell
+	var death_pos = global_position
+	get_tree().current_scene.add_child(splash)
+	splash.global_position = death_pos
 	# Wake nearby enemies FIRST so they become aggro before we decrement the count
 	var all_enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in all_enemies:

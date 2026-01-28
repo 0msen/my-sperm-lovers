@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const DeathSplash = preload("res://scenes/effects/death_splash.tscn")
+
 @export var static_mode: bool = false
 @export var move_speed: float = 2.0
 @export var wander_range: float = 5.0
@@ -217,6 +219,12 @@ func die() -> void:
 	if is_dead: return  # Prevent double-death from multiple pellets in same frame
 	is_dead = true
 	print("Sibling died!")
+	# Spawn death effect
+	var splash = DeathSplash.instantiate()
+	splash.set_color(Color(0.85, 0.75, 0.7))  # Grayish-peach for sperm
+	var death_pos = global_position
+	get_tree().current_scene.add_child(splash)
+	splash.global_position = death_pos
 	# Wake nearby siblings FIRST so they become aggro before we decrement the count
 	var all_enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in all_enemies:

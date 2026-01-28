@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8d5xnqs7uyfj"]
+
+[ext_resource type="Script" path="res://scripts/death_splash.gd" id="1_splash"]
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_splash"]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, -12, 0)
+scale_min = 0.8
+scale_max = 1.2
+scale_curve = SubResource("Curve_scale")
+color = Color(1, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_splash"]
+radius = 0.08
+height = 0.16
+radial_segments = 8
+rings = 4
+
+[node name="DeathSplash" type="Node3D"]
+script = ExtResource("1_splash")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 15
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+randomness = 0.2
+process_material = SubResource("ParticleProcessMaterial_splash")
+draw_pass_1 = SubResource("SphereMesh_splash")
