@@ -221,7 +221,12 @@ func die() -> void:
 	print("Sibling died!")
 	# Spawn death effect
 	var splash = DeathSplash.instantiate()
-	splash.set_color(Color(0.85, 0.75, 0.7))  # Grayish-peach for sperm
+	var colors: Array[Color] = [
+		Color(0.6, 0.6, 0.6),    # Grey
+		Color(1.0, 0.4, 0.6),    # Pink
+		Color(0.5, 0.0, 0.15),   # Maroon
+	]
+	splash.set_colors(colors)
 	var death_pos = global_position
 	get_tree().current_scene.add_child(splash)
 	splash.global_position = death_pos

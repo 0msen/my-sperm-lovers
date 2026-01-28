@@ -211,7 +211,12 @@ func die() -> void:
 	print("White blood cell died!")
 	# Spawn death effect
 	var splash = DeathSplash.instantiate()
-	splash.set_color(Color(0.95, 0.95, 0.9))  # Off-white for white blood cell
+	var colors: Array[Color] = [
+		Color(0.95, 0.95, 0.95), # White
+		Color(1.0, 0.4, 0.6),    # Pink
+		Color(0.5, 0.0, 0.15),   # Maroon
+	]
+	splash.set_colors(colors)
 	var death_pos = global_position
 	get_tree().current_scene.add_child(splash)
 	splash.global_position = death_pos
