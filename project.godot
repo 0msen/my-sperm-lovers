@@ -38,6 +38,7 @@ player=""
 enemies=""
 interactable=""
 pillars=""
+boss=""
 
 [input]
 

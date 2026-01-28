@@ -165,8 +165,7 @@ omni_range = 7.206023
 
 [node name="AbstractDoor" parent="." instance=ExtResource("4_upsmr")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0.5911617, 1.474934, -16.7337)
-auto_chain_dialog_id = "DoorethyL0_0"
-enemy_group = "enemies"
+auto_chain_dialog_id = "DoorethyL0"
 
 [node name="SecretZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7255995, 1.4062264, 6.462715)
@@ -339,7 +338,7 @@ script = ExtResource("8_hfwtw")
 [node name="@CollisionShape3D@37037" type="CollisionShape3D" parent="tilemap/Level0/_StaticBody3D_37038"]
 shape = ExtResource("9_2mu0v")
 
-[node name="Player" parent="." instance=ExtResource("22_player") groups=["player"]]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("22_player")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]

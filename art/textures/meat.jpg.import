@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bco2rkhrh18c3"
-path="res://.godot/imported/Gun_Image_0.png-a6341ebb170bde692fcfaa9841a49eb5.ctex"
+uid="uid://biymqtgmhmyt0"
+path="res://.godot/imported/meat.jpg-ef470a268ab54f6b5ee05afbc6e8f011.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "32ab025c1bc4247cd8dfe99bc124e9a9"
 }
 
 [deps]
 
-source_file="res://art/glbtf/Gun_Image_0.png"
-dest_files=["res://.godot/imported/Gun_Image_0.png-a6341ebb170bde692fcfaa9841a49eb5.ctex"]
+source_file="res://art/textures/meat.jpg"
+dest_files=["res://.godot/imported/meat.jpg-ef470a268ab54f6b5ee05afbc6e8f011.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

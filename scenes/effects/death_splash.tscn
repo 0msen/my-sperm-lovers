@@ -1,43 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8d5xnqs7uyfj"]
+[gd_scene load_steps=7 format=3 uid="uid://c8d5xnqs7uyfj"]
 
-[ext_resource type="Script" path="res://scripts/death_splash.gd" id="1_splash"]
-
-[sub_resource type="Curve" id="Curve_scale"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3), 0.0, 0.0, 0, 0]
-point_count = 2
+[ext_resource type="Script" uid="uid://dedfb6sebslr5" path="res://scripts/death_splash.gd" id="1_splash"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1"]
 direction = Vector3(0, 1, 0)
 spread = 180.0
-initial_velocity_min = 4.0
-initial_velocity_max = 6.0
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
 gravity = Vector3(0, -12, 0)
 scale_min = 0.8
 scale_max = 1.2
-scale_curve = SubResource("Curve_scale")
-color = Color(1, 1, 1, 1)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2"]
-direction = Vector3(0, 1, 0)
-spread = 180.0
-initial_velocity_min = 4.0
-initial_velocity_max = 6.0
-gravity = Vector3(0, -12, 0)
-scale_min = 0.8
-scale_max = 1.2
-scale_curve = SubResource("Curve_scale")
-color = Color(1, 1, 1, 1)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3"]
-direction = Vector3(0, 1, 0)
-spread = 180.0
-initial_velocity_min = 4.0
-initial_velocity_max = 6.0
-gravity = Vector3(0, -12, 0)
-scale_min = 0.8
-scale_max = 1.2
-scale_curve = SubResource("Curve_scale")
-color = Color(1, 1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_color"]
 vertex_color_use_as_albedo = true
@@ -49,12 +21,31 @@ height = 0.16
 radial_segments = 8
 rings = 4
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2"]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, -12, 0)
+scale_min = 0.8
+scale_max = 1.2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3"]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 6.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -12, 0)
+scale_min = 0.8
+scale_max = 1.2
+
 [node name="DeathSplash" type="Node3D"]
 script = ExtResource("1_splash")
 
 [node name="Particles1" type="GPUParticles3D" parent="."]
-amount = 5
-lifetime = 0.8
+emitting = false
+amount = 50
+lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 randomness = 0.2
@@ -62,8 +53,9 @@ process_material = SubResource("ParticleProcessMaterial_1")
 draw_pass_1 = SubResource("SphereMesh_splash")
 
 [node name="Particles2" type="GPUParticles3D" parent="."]
-amount = 5
-lifetime = 0.8
+emitting = false
+amount = 20
+lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 randomness = 0.2
@@ -71,8 +63,9 @@ process_material = SubResource("ParticleProcessMaterial_2")
 draw_pass_1 = SubResource("SphereMesh_splash")
 
 [node name="Particles3" type="GPUParticles3D" parent="."]
-amount = 5
-lifetime = 0.8
+emitting = false
+amount = 50
+lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 randomness = 0.2

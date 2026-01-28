@@ -71,7 +71,11 @@ func add_karma_xp(amount: float) -> void:
 	print("[GameManager] Karma XP: ", amount, " | Raw: ", raw_karma, " | Level: ", level, " | Progress: ", progress)
 	karma_updated.emit(level, progress, is_positive)
 
+# Added a function, exclusive for the dialog system only
+func get_karma_level_DialogSystem() -> float:
+	return raw_karma
 
+# Wont try to edit this
 func get_karma_level() -> int:
 	if raw_karma >= 0.0:
 		return int(floor(raw_karma))
