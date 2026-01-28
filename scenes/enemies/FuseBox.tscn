@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bthqkxn20mj0j"]
+
+[ext_resource type="PackedScene" uid="uid://cfuy7utv00ig5" path="res://art/glbtf/Heart.fbx" id="1_5roc7"]
+[ext_resource type="PackedScene" uid="uid://chpbar3dscene" path="res://scenes/ui/hp_bar_3d.tscn" id="2_46ce0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8v7k2"]
+radius = 0.8417969
+height = 2.6513672
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lu7a5"]
+radius = 1.5
+
+[node name="FuseBox" type="StaticBody3D" groups=["enemies"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8v7k2")
+
+[node name="Heart" parent="." instance=ExtResource("1_5roc7")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="AttackHitbox" type="Area3D" parent="."]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.079933524, -0.23713809)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackHitbox"]
+shape = SubResource("SphereShape3D_lu7a5")
+
+[node name="HPBar" parent="." instance=ExtResource("2_46ce0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+fill_color = Color(0.8, 0.2, 0.2, 1)
+always_visible = false

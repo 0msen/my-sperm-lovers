@@ -1,0 +1,145 @@
+[gd_scene load_steps=12 format=3 uid="uid://b06d8v4togjsy"]
+
+[ext_resource type="Script" uid="uid://cmupj5oby6bq1" path="res://scenes/levels/electricdoor.gd" id="1_nofif"]
+[ext_resource type="Material" uid="uid://cupdd4e00eo2p" path="res://art/glbtf/entitiesMaterials/door/Material.001.tres" id="2_y8p3c"]
+[ext_resource type="Script" uid="uid://u71kt1jo3345" path="res://scenes/levels/pressureplate.gd" id="3_jb7b2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dh8jw"]
+material = ExtResource("2_y8p3c")
+size = Vector3(1.5, 2.5, 0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dorh7"]
+data = PackedVector3Array(-0.75, 1.25, 0.25, 0.75, 1.25, 0.25, -0.75, -1.25, 0.25, 0.75, 1.25, 0.25, 0.75, -1.25, 0.25, -0.75, -1.25, 0.25, 0.75, 1.25, -0.25, -0.75, 1.25, -0.25, 0.75, -1.25, -0.25, -0.75, 1.25, -0.25, -0.75, -1.25, -0.25, 0.75, -1.25, -0.25, 0.75, 1.25, 0.25, 0.75, 1.25, -0.25, 0.75, -1.25, 0.25, 0.75, 1.25, -0.25, 0.75, -1.25, -0.25, 0.75, -1.25, 0.25, -0.75, 1.25, -0.25, -0.75, 1.25, 0.25, -0.75, -1.25, -0.25, -0.75, 1.25, 0.25, -0.75, -1.25, 0.25, -0.75, -1.25, -0.25, 0.75, 1.25, 0.25, -0.75, 1.25, 0.25, 0.75, 1.25, -0.25, -0.75, 1.25, 0.25, -0.75, 1.25, -0.25, 0.75, 1.25, -0.25, -0.75, -1.25, 0.25, 0.75, -1.25, 0.25, -0.75, -1.25, -0.25, 0.75, -1.25, 0.25, 0.75, -1.25, -0.25, -0.75, -1.25, -0.25)
+
+[sub_resource type="Animation" id="Animation_n00oh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(21.028807, -1.7861938, 74.1146)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.8175045, -1.1542225)]
+}
+
+[sub_resource type="Animation" id="Animation_dshas"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 1),
+"transitions": PackedFloat32Array(0.11662917, 1, 1, 1),
+"update": 0,
+"values": [Vector3(21.028807, -1.7861938, 74.1146), Vector3(21.029, -1.5, 74.115), Vector3(21.029, -1.3, 74.115), Vector3(21.029, 2.8, 74.115)]
+}
+
+[sub_resource type="Animation" id="Animation_dorh7"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(21.029, 2.8, 74.115), Vector3(21.029, -2, 74.115)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jsyro"]
+_data = {
+&"RESET": SubResource("Animation_n00oh"),
+&"close": SubResource("Animation_dshas"),
+&"open": SubResource("Animation_dorh7")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_anx0k"]
+size = Vector3(1, 0.4, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_anx0k"]
+data = PackedVector3Array(-0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, -0.5, -0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, -0.19999999, 0.5, -0.5, -0.19999999, 0.5, 0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, 0.5, -0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, -0.19999999, -0.5, 0.5, -0.19999999, -0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, -0.5, 0.5, -0.19999999, 0.5, 0.5, 0.19999999, -0.5, 0.5, -0.19999999, -0.5, 0.5, -0.19999999, 0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, -0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, -0.19999999, 0.5, -0.5, -0.19999999, -0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, 0.5, 0.5, 0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5, 0.5, 0.19999999, -0.5, -0.5, -0.19999999, 0.5, 0.5, -0.19999999, 0.5, -0.5, -0.19999999, -0.5, 0.5, -0.19999999, 0.5, 0.5, -0.19999999, -0.5, -0.5, -0.19999999, -0.5)
+
+[node name="Puzzle" type="Node3D" groups=["conductive"]]
+
+[node name="First Door" type="Node3D" parent="."]
+
+[node name="electricdoor" type="Node3D" parent="First Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.028807, -1.7861938, 74.1146)
+script = ExtResource("1_nofif")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="First Door/electricdoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8175045, -1.1542225)
+
+[node name="door_mesh" type="MeshInstance3D" parent="First Door/electricdoor/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.4430733, -0.5498843, -0.7117691)
+mesh = SubResource("BoxMesh_dh8jw")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="First Door/electricdoor/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.4430733, -0.5498843, -0.7117691)
+shape = SubResource("ConcavePolygonShape3D_dorh7")
+
+[node name="DoorAnimation" type="AnimationPlayer" parent="First Door/electricdoor"]
+libraries = {
+&"": SubResource("AnimationLibrary_jsyro")
+}
+
+[node name="Area3D" type="Area3D" parent="First Door/electricdoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5903816, 0, 4.5302124)
+
+[node name="pressureplate2" type="Area3D" parent="First Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.028807, -0.1321485, 82.28461)
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("3_jb7b2")
+
+[node name="Visual" type="Node3D" parent="First Door/pressureplate2"]
+
+[node name="Visual" type="MeshInstance3D" parent="First Door/pressureplate2/Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270828, 0)
+mesh = SubResource("BoxMesh_anx0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First Door/pressureplate2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270828, 0)
+shape = SubResource("ConcavePolygonShape3D_anx0k")
+
+[node name="pressureplate" type="Area3D" parent="First Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.028807, -0.1321485, 85.32115)
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("3_jb7b2")
+
+[node name="Visual" type="Node3D" parent="First Door/pressureplate"]
+
+[node name="Visual" type="MeshInstance3D" parent="First Door/pressureplate/Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270828, 0)
+mesh = SubResource("BoxMesh_anx0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First Door/pressureplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270828, 0)
+shape = SubResource("ConcavePolygonShape3D_anx0k")
+
+[connection signal="power_changed" from="First Door/pressureplate2" to="First Door/electricdoor" method="set_power"]
+[connection signal="power_changed" from="First Door/pressureplate" to="First Door/electricdoor" method="set_power"]

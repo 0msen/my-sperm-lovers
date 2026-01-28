@@ -1,0 +1,174 @@
+[gd_scene load_steps=22 format=3 uid="uid://bueloum36cejo"]
+
+[ext_resource type="Script" uid="uid://dbk76ihl3wkx8" path="res://scenes/levels/level_4.gd" id="1_rdsj4"]
+[ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_eh8f3"]
+[ext_resource type="Script" uid="uid://bovjpdr0k6psd" path="res://scripts/red_organ.gd" id="2_fjlvv"]
+[ext_resource type="PackedScene" uid="uid://bthqkxn20mj0j" path="res://scenes/enemies/FuseBox.tscn" id="4_o34q2"]
+[ext_resource type="PackedScene" uid="uid://ji4gv8j0xc37" path="res://art/glbtf/door.glb" id="5_rdsj4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_bvgno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpm10"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_8rpwu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eh8f3"]
+albedo_color = Color(0.5882353, 0, 0, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fjlvv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rpwu"]
+shading_mode = 0
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_eh8f3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjlvv"]
+albedo_color = Color(0, 0, 0.5882353, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_o34q2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdsj4"]
+shading_mode = 0
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_e127x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_heu5o"]
+albedo_color = Color(0, 0.5882353, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s45gt"]
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4vryo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1ckg"]
+albedo_color = Color(0.54093844, 0.54093874, 0, 1)
+
+[sub_resource type="Environment" id="Environment_eh8f3"]
+background_mode = 1
+background_color = Color(0.27298582, 1.2634322e-07, 4.813075e-08, 1)
+ambient_light_color = Color(0.70980394, 0, 0, 1)
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.40176448, 0, 0, 1)
+fog_light_energy = 5.0
+fog_density = 1.0
+fog_sky_affect = 0.0
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_emission = Color(0.21960784, 0, 0, 1)
+volumetric_fog_sky_affect = 0.0
+adjustment_enabled = true
+
+[node name="SimonSays" type="Node3D"]
+script = ExtResource("1_rdsj4")
+
+[node name="RedOrgan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48369312, -7.384535, -1.0601392)
+script = ExtResource("2_fjlvv")
+
+[node name="Glow" type="MeshInstance3D" parent="RedOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5668373, 5, -1.5548114)
+mesh = SubResource("SphereMesh_bvgno")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mpm10")
+
+[node name="Normal" type="MeshInstance3D" parent="RedOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5668373, 5, -1.5548114)
+mesh = SubResource("SphereMesh_8rpwu")
+surface_material_override/0 = SubResource("StandardMaterial3D_eh8f3")
+
+[node name="Area3D" type="Area3D" parent="RedOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.567, 5, -1.555)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedOrgan/Area3D"]
+shape = SubResource("SphereShape3D_fjlvv")
+
+[node name="BlueOrgan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.066569805, -5.164316, -0.3484044)
+
+[node name="Glow" type="MeshInstance3D" parent="BlueOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29586, 5, 0)
+mesh = SubResource("SphereMesh_bvgno")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8rpwu")
+
+[node name="Normal" type="MeshInstance3D" parent="BlueOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29586, 5, 0)
+mesh = SubResource("SphereMesh_eh8f3")
+surface_material_override/0 = SubResource("StandardMaterial3D_fjlvv")
+
+[node name="Area3D" type="Area3D" parent="BlueOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.296, 5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueOrgan/Area3D"]
+shape = SubResource("SphereShape3D_fjlvv")
+
+[node name="GreenOrgan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8067298, -7.6851826, -0.10213995)
+
+[node name="Glow" type="MeshInstance3D" parent="GreenOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+mesh = SubResource("SphereMesh_o34q2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_rdsj4")
+
+[node name="Normal" type="MeshInstance3D" parent="GreenOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+mesh = SubResource("SphereMesh_e127x")
+surface_material_override/0 = SubResource("StandardMaterial3D_heu5o")
+
+[node name="Area3D" type="Area3D" parent="GreenOrgan"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenOrgan/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+shape = SubResource("SphereShape3D_fjlvv")
+
+[node name="YellowOrgan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7359991, -5.07187, -3.0685334)
+
+[node name="Glow" type="MeshInstance3D" parent="YellowOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+mesh = SubResource("SphereMesh_bvgno")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_s45gt")
+
+[node name="Normal" type="MeshInstance3D" parent="YellowOrgan"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+mesh = SubResource("SphereMesh_4vryo")
+surface_material_override/0 = SubResource("StandardMaterial3D_g1ckg")
+
+[node name="Area3D" type="Area3D" parent="YellowOrgan"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="YellowOrgan/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+shape = SubResource("SphereShape3D_fjlvv")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eh8f3")
+
+[node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
+transform = Transform3D(0.7071068, -0.4055798, 0.579228, 0, 0.81915206, 0.57357645, -0.7071068, -0.4055798, 0.579228, 5, 5, 5)
+projection = 1
+size = 10.0
+script = ExtResource("2_eh8f3")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.9802322e-07, 0, 3.2782555e-07, 1, 0.05516666, 0.65837556, -6.167001)
+light_color = Color(0.9647059, 0.9411765, 0.30588236, 1)
+light_energy = 3.0
+omni_range = 7.206023
+
+[node name="FuseBox" parent="." instance=ExtResource("4_o34q2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40298, -0.8526865, -3.1698217)
+
+[node name="door" parent="." instance=ExtResource("5_rdsj4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.076610565, -1.1033735, -7.718198)
+
+[connection signal="input_event" from="RedOrgan/Area3D" to="." method="_on_red_area_input_event"]
+[connection signal="input_event" from="BlueOrgan/Area3D" to="." method="_on_blue_area_input_event"]
+[connection signal="input_event" from="GreenOrgan/Area3D" to="." method="_on_green_area_input_event"]
+[connection signal="input_event" from="YellowOrgan/Area3D" to="." method="_on_yellow_area_input_event"]

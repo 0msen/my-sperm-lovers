@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://p76fxfi32028"]
+
+[ext_resource type="Script" path="res://scripts/sibling_sperm_lvl_2.gd" id="1_metrw"]
+[ext_resource type="PackedScene" uid="uid://41b2353bfoi4" path="res://art/glbtf/SpermEnemy.glb" id="2_fh4tv"]
+[ext_resource type="PackedScene" uid="uid://chpbar3dscene" path="res://scenes/ui/hp_bar_3d.tscn" id="3_8yigq"]
+[ext_resource type="PackedScene" uid="uid://c6sr2w4xbnhs6" path="res://scenes/dialog_system.tscn" id="4_mdvqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4p5j"]
+radius = 0.51904297
+height = 2.4301758
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_attack"]
+radius = 1.5
+
+[sub_resource type="GDScript" id="GDScript_fh4tv"]
+script/source = "extends NavigationAgent3D
+"
+
+[node name="SiblingSperm" type="CharacterBody3D" groups=["enemies"]]
+collision_layer = 2
+script = ExtResource("1_metrw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.18385065, 0.9767761, -0.037719727)
+shape = SubResource("CapsuleShape3D_g4p5j")
+
+[node name="SpermEnemy" parent="." instance=ExtResource("2_fh4tv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="AttackHitbox" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackHitbox"]
+shape = SubResource("SphereShape3D_attack")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+script = SubResource("GDScript_fh4tv")
+
+[node name="HPBar" parent="." instance=ExtResource("3_8yigq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+fill_color = Color(0.8, 0.2, 0.2, 1)
+always_visible = false
+
+[node name="DialogSystem" parent="." instance=ExtResource("4_mdvqv")]

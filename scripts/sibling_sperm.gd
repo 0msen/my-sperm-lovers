@@ -13,7 +13,7 @@ const DeathSplash = preload("res://scenes/effects/death_splash.tscn")
 @export var stop_distance: float = 1.2
 @export var separation_radius: float = 2.0
 @export var separation_force: float = 1.5
-@export var model_rotation_offset: float = -PI/2
+@export var model_rotation_offset: float = -PI/2	
 
 # Distance within which nearby violence wakes this sperm
 @export var wake_on_violence_range: float = 12.0

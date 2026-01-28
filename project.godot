@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="sperm-lovers"
-run/main_scene="uid://dc3nrto6h6374"
+run/main_scene="uid://c1ik22b8i70y5"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -39,6 +39,8 @@ enemies=""
 interactable=""
 pillars=""
 boss=""
+conductive=""
+pushable=""
 
 [input]
 

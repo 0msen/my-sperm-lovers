@@ -1,9 +1,9 @@
 extends CharacterBody3D
-
+@onready var mesh: MeshInstance3D = $Mesh
 # Movement
 @export var move_speed: float = 6.0
 @export var aim_move_speed_multiplier: float = 0.5 # divison slow
-
+@export var push_speed := 2.0
 # Shooting
 @export var bullet_scene: PackedScene
 @export var pellet_count: int = 3
@@ -22,7 +22,7 @@ extends CharacterBody3D
 @onready var aim_sound: AudioStreamPlayer3D = $AimSound
 @onready var hp_bar: Node3D = $HPBar
 @onready var activation_radius: Area3D = $ActivationRadius
-
+@export var conductive := true
 # Isometric direction conversion
 var iso_forward := Vector3(-1, 0, -1).normalized()
 var iso_back := Vector3(1, 0, 1).normalized()
@@ -41,6 +41,8 @@ var knockback_velocity := Vector3.ZERO
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	health = max_health
+	if conductive:
+		add_to_group("conductive")
 	add_to_group("player")
 	if hp_bar:
 		hp_bar.update_health(health, max_health)
@@ -59,10 +61,31 @@ func _physics_process(delta: float) -> void:
 	velocity += knockback_velocity
 
 	move_and_slide()
-
+	_push_character_bodies()
+	_handle_push_collision()
 	# Decay knockback after movement (so first frame gets full knockback)
 	knockback_velocity = knockback_velocity.move_toward(Vector3.ZERO, 40.0 * delta)
+func _handle_push_collision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var body = collision.get_collider()
 
+		if body is CharacterBody3D and body.is_in_group("pushable"):
+			var push_dir = collision.get_normal() * -1
+			push_dir.y = 0
+			push_dir = push_dir.normalized()
+
+			body.velocity.x = push_dir.x * push_speed
+			body.velocity.z = push_dir.z * push_speed
+			body.move_and_slide()
+func _push_character_bodies():
+	for i in get_slide_collision_count():
+		var col = get_slide_collision(i)
+		var body = col.get_collider()
+
+		if body and body.has_method("apply_push"):
+			var dir = -col.get_normal()
+			body.apply_push(dir)
 func handle_aiming_input() -> void:
 	is_aiming = Input.is_action_pressed("aim")
 	if Input.is_action_just_pressed("aim"): aim_sound.play()
@@ -151,28 +174,41 @@ func notify_nearby_violence(violence_position: Vector3) -> void:
 			enemy._on_nearby_violence(violence_position)
 
 
-func take_damage(amount: int, attacker_position: Vector3) -> void:
+func take_damage(
+	amount: int,
+	attacker_position: Vector3,
+	apply_knockback := true
+) -> void:
 	if is_invincible:
 		return
 
 	health -= amount
 	print("Player took ", amount, " damage! Health: ", health)
+	if mesh and mesh.material_override:
+		mesh.material_override.emission = Color.GREEN
 
+		get_tree().create_timer(0.15).timeout.connect(_reset_burn_effect)
+
+	if hp_bar:
+		hp_bar.update_health(health, max_health)
 	if hp_bar:
 		hp_bar.update_health(health, max_health)
 
 	# Apply knockback away from attacker
-	var knockback_dir = (global_position - attacker_position).normalized()
-	knockback_dir.y = 0
-	knockback_velocity = knockback_dir * knockback_force
+	if apply_knockback:
+		var knockback_dir = (global_position - attacker_position).normalized()
+		knockback_dir.y = 0
+		knockback_velocity = knockback_dir * knockback_force
 
-	# Start invincibility frames
 	is_invincible = true
 	get_tree().create_timer(invincibility_duration).timeout.connect(_end_invincibility)
-
+	
 	if health <= 0:
 		die()
-
+		
+func _reset_burn_effect() -> void:
+	if mesh and mesh.material_override:
+		mesh.material_override.emission = Color.BLACK
 
 func _end_invincibility() -> void:
 	is_invincible = false
@@ -180,18 +216,15 @@ func _end_invincibility() -> void:
 
 func die() -> void:
 	print("Player died!")
-	# For now just print - can add respawn/game over logic later
 	queue_free()
 
 
 func _deactivate_distant_enemies() -> void:
-	# Wait for physics to process overlaps (extra frames to ensure enemies have initialized)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	if not activation_radius:
 		return
-	# Get all enemies in range
 	var nearby_enemies: Array[Node3D] = []
 	for body in activation_radius.get_overlapping_bodies():
 		if body.is_in_group("enemies"):

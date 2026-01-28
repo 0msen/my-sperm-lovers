@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://dinjw7fdmiu4h"]
+
+[ext_resource type="Script" path="res://scripts/elevato_map_manager.gd" id="1_eqj1i"]
+[ext_resource type="Script" path="res://scripts/elevator.gd" id="1_s37nd"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/sibling_sperm_lvl2.tscn" id="2_j7pir"]
+[ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="3_eqj1i"]
+[ext_resource type="PackedScene" path="res://scenes/player/player_lvl2.tscn" id="5_26lgc"]
+[ext_resource type="PackedScene" path="res://scenes/player/bullet_lvl2.tscn" id="7_q3hvl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30rc7"]
+size = Vector3(5.908722, 2.4692383, 5.1880493)
+
+[sub_resource type="Environment" id="Environment_j7pir"]
+background_mode = 1
+background_color = Color(0.4, 0, 0, 1)
+ambient_light_color = Color(0.70980394, 0, 0, 1)
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.40176448, 0, 0, 1)
+fog_light_energy = 5.0
+fog_density = 1.0
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_emission = Color(0.4, 0, 0, 1)
+volumetric_fog_sky_affect = 0.0
+adjustment_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_26lgc"]
+vertices = PackedVector3Array(-24.5, 0.33219686, -24.80635, -24.5, 0.33219686, 24.19365, 24.5, 0.33219686, 24.19365, 24.5, 0.33219686, -24.80635)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[node name="MainMap" type="Node3D"]
+script = ExtResource("1_eqj1i")
+sibling_scene = ExtResource("2_j7pir")
+
+[node name="Elevator" type="CSGCombiner3D" parent="."]
+use_collision = true
+script = ExtResource("1_s37nd")
+
+[node name="BoxOuter" type="CSGBox3D" parent="Elevator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54849243, 0, -0.81469727)
+use_collision = true
+size = Vector3(5.6411743, 4, 5.6293945)
+
+[node name="BoxInner" type="CSGBox3D" parent="Elevator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7809713, 2.1328547, -0.41785717)
+operation = 2
+use_collision = true
+size = Vector3(4.525052, 4.2, 5.6109376)
+
+[node name="TriggerZone" type="Area3D" parent="Elevator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.882309)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Elevator/TriggerZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10612488, 0.73461914, 2.0879822)
+shape = SubResource("BoxShape3D_30rc7")
+
+[node name="Timer" type="Timer" parent="Elevator"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Gate" type="CSGBox3D" parent="Elevator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5972338, 4.5, 1.864)
+size = Vector3(5.309958, 4, 0.2)
+
+[node name="Marker1" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96839905, 0.98821187, -2.4556694)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j7pir")
+
+[node name="Camera3D" type="Camera3D" parent="WorldEnvironment2" node_paths=PackedStringArray("target")]
+transform = Transform3D(0.7071068, -0.4055798, 0.579228, 0, 0.81915206, 0.57357645, -0.7071068, -0.4055798, 0.579228, 5, 5, 12.997957)
+projection = 1
+size = 10.0
+script = ExtResource("3_eqj1i")
+target = NodePath("../../Player")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment2/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.9802322e-07, 0, 3.2782555e-07, 1, 0.05516666, 0.65837556, -6.167001)
+light_color = Color(0.9647059, 0.9411765, 0.30588236, 1)
+light_energy = 3.0
+omni_range = 7.206023
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_26lgc")
+
+[node name="Floor" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.067803144, -0.30635047)
+use_collision = true
+size = Vector3(50, 0.2, 50)
+
+[node name="Player" parent="." instance=ExtResource("5_26lgc")]
+transform = Transform3D(-0.9978015, 0, 0.0662738, 0, 1, 0, -0.0662738, 0, -0.9978015, -2.4676037, 0.81221247, 16.995956)
+bullet_scene = ExtResource("7_q3hvl")

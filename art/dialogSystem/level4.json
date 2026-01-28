@@ -1,0 +1,56 @@
+{
+  "doorethy_intro": {
+    "name": "Doorethy",
+    "text": "Oh, you want through? Prove you're CULTURED. Simon Says time, darling."
+  },
+  
+  "doorethy_mock_1": {
+    "name": "Doorethy",
+    "text": "Wow, look at you following rules. Good puppy."
+  },
+  
+  "doorethy_mock_2": {
+    "name": "Doorethy",
+    "text": "My grandmother could do this faster. She's dead."
+  },
+  
+  "doorethy_mock_3": {
+    "name": "Doorethy",
+    "text": "Still going? I'm impressed. Well, not really."
+  },
+  
+  "doorethy_wrong": {
+    "name": "Doorethy",
+    "text": "WRONG! Start over, nerd."
+  },
+  
+  "doorethy_wrong_round_9": {
+    "name": "Doorethy",
+    "text": "OH NO! You were SO CLOSE! Back to Round 1, sweetheart."
+  },
+  
+  "doorethy_hurt_1": {
+    "name": "Doorethy",
+    "text": "H-hey! What are you doing?!"
+  },
+  
+  "doorethy_hurt_2": {
+    "name": "Doorethy",
+    "text": "STOP! You're hurting me!"
+  },
+  
+  "doorethy_hurt_3": {
+    "name": "Doorethy",
+    "text": "Please... I'm just doing my job..."
+  },
+  
+  "doorethy_death": {
+    "name": "Doorethy",
+    "text": "You... MONSTER..."
+  },
+  
+  "doorethy_victory": {
+    "name": "Doorethy",
+    "text": "Fine. You're... adequate. You may pass."
+  }
+}

@@ -16,7 +16,6 @@ const DeathSplash = preload("res://scenes/effects/death_splash.tscn")
 @export var separation_radius: float = 3.0
 @export var separation_force: float = 2.0
 @export var model_rotation_offset: float = -PI/2
-
 # Wake-up range for nearby violence (shooting / death nearby)
 @export var wake_on_violence_range: float = 14.0      # Slightly larger than sperm for WBC "alertness"
 
@@ -51,14 +50,14 @@ func _ready() -> void:
 	last_position = global_position
 	health = max_health
 	add_to_group("enemies")
-	
+
 	print("WhiteCell spawned – layers: ", collision_layer, " groups: ", get_groups())
 	if not static_mode: pick_new_wander_target()
-	
+
 	if attack_hitbox:
 		attack_hitbox.body_entered.connect(_on_hitbox_body_entered)
 		attack_hitbox.body_exited.connect(_on_hitbox_body_exited)
-	
+
 	# Give nav time to init
 	await get_tree().physics_frame
 	await get_tree().physics_frame
@@ -196,6 +195,8 @@ func detect_targets() -> void:
 	is_chasing = false
 
 func take_damage(amount: int) -> bool:
+	if is_dead:
+		return false
 	health -= amount
 	print("White blood cell took ", amount, " damage! Health: ", health)
 	if hp_bar: hp_bar.update_health(health, max_health)
@@ -206,8 +207,9 @@ func take_damage(amount: int) -> bool:
 	return false
 
 func die() -> void:
-	if is_dead: return  # Prevent double-death from multiple pellets in same frame
+	if is_dead: return  # Prevent double-death from multiple pellets
 	is_dead = true
+
 	print("White blood cell died!")
 	# Spawn death effect
 	var splash = DeathSplash.instantiate()
@@ -247,11 +249,11 @@ func _on_nearby_violence(violence_position: Vector3) -> void:
 
 func check_continuous_attack() -> void:
 	if not is_aggro or not can_attack or not attack_hitbox: return
-	
+
 	for body in attack_hitbox.get_overlapping_bodies():
 		if body.is_in_group("player") and body.has_method("take_damage"):
 			body.take_damage(attack_damage, global_position)
-			
+
 			# Knockback on player
 			if body.has_method("apply_knockback") or body.has_method("knockback_velocity"):
 				var dir = (body.global_position - global_position).normalized()
