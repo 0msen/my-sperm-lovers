@@ -11,11 +11,7 @@ config_version=5
 [application]
 
 config/name="sperm-lovers"
-<<<<<<< Updated upstream
-run/main_scene="uid://cwr45gni5pe0w"
-=======
 run/main_scene="uid://c1ik22b8i70y5"
->>>>>>> Stashed changes
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
