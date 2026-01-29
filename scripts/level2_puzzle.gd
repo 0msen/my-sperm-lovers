@@ -18,6 +18,8 @@ var valves: Array[Node] = []
 var sperms: Array[Node] = []
 
 func _ready() -> void:
+	add_to_group("level2_puzzle")
+
 	# Find all valves in scene after a frame
 	await get_tree().process_frame
 	_find_and_connect_valves()
