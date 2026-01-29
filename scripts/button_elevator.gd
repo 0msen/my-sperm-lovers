@@ -22,8 +22,12 @@ func _ready() -> void:
 		interact_area.body_exited.connect(_on_interact_area_exited)
 
 	_find_elevator_zone()
-	_find_level2_puzzle()
 	_set_light_color(false)  # start invalid/red
+
+	# Defer finding puzzle to ensure it's initialized first
+	await get_tree().process_frame
+	await get_tree().process_frame
+	_find_level2_puzzle()
 
 	print("[ElevatorButton] Initialized at ", global_position)
 

@@ -13,6 +13,7 @@ var can_rise: bool = false
 var gate_closing: bool = false
 var initial_gate_position: Vector3
 var is_departed: bool = false
+var valves_complete: bool = false  # Track if pacifist route completed
 
 # --- Node References ---
 @onready var gate: Node3D = $Edoor_mesh
@@ -46,11 +47,14 @@ func _ready() -> void:
 # NEW: This function receives the button press + validation result
 func _on_button_pressed_and_validated(is_valid: bool, enemy_count: int, has_player: bool) -> void:
 	print("[Elevator] Button pressed → Validation: ", "VALID" if is_valid else "INVALID")
-	
+
 	if is_departed:
 		print("[Elevator] Already departed — ignoring button press")
 		return
-	
+
+	# Check if valves are complete (for pacifist route)
+	_check_valves_complete()
+
 	if is_valid:
 		print("[Elevator] Zone valid → starting departure (gate closing + rise)")
 		start_departure()
@@ -58,6 +62,14 @@ func _on_button_pressed_and_validated(is_valid: bool, enemy_count: int, has_play
 		# Optional: give feedback why it failed
 		if not has_player: print("[Elevator] Cannot depart — player not in zone")
 		else: print("[Elevator] Cannot depart — ", enemy_count, " enemies still inside")
+
+func _check_valves_complete() -> void:
+	for node in get_tree().get_nodes_in_group("level2_puzzle"):
+		if node.has_method("are_all_valves_complete"):
+			valves_complete = node.are_all_valves_complete()
+			if valves_complete:
+				print("[Elevator] Valves complete - pacifist route!")
+			return
 
 
 # Original zone status signal handler
@@ -75,17 +87,20 @@ func start_departure() -> void:
 	if is_departed:
 		print("[Elevator] Already departed")
 		return
-	
-	# Final safety check (optional but recommended)
-	if not elevator_zone or not elevator_zone.is_zone_valid():
-		print("[Elevator] Final check failed - zone invalid")
-		return
-	
+
+	# Final safety check - bypass if valves complete (pacifist route)
+	if not valves_complete:
+		if not elevator_zone or not elevator_zone.is_zone_valid():
+			print("[Elevator] Final check failed - zone invalid")
+			return
+	else:
+		print("[Elevator] Bypassing enemy check - valves complete!")
+
 	is_departed = true
 	gate_closing = true
 	can_rise = true
 	set_physics_process(true)   # ← this enables _physics_process → door closes + elevator rises
-	
+
 	print("[Elevator] Departure sequence initiated")
 
 

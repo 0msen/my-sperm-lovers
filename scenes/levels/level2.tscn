@@ -183,7 +183,7 @@ metadata/_custom_type_script = "uid://4kv8f8ejgwqn"
 
 [node name="enviroment_mesh" type="StaticBody3D" parent="Map"]
 visible = false
-collision_layer = 0
+collision_layer = 1
 collision_mask = 0
 script = ExtResource("6_gycjm")
 
@@ -306,9 +306,6 @@ navigation_mesh = SubResource("NavigationMesh_f3b2k")
 
 [node name="Valve" parent="." instance=ExtResource("18_yhrca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9511347, 0, -2.8899436)
-
-[node name="Valve2" parent="." instance=ExtResource("18_yhrca")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9754057, 0, -4.6091404)
 
 [node name="Valve3" parent="." instance=ExtResource("18_yhrca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.19, 0, -2.849)
