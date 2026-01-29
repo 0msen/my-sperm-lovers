@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dbk76ihl3wkx8" path="res://scenes/levels/level_4.gd" id="1_rdsj4"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_eh8f3"]
-[ext_resource type="Script" uid="uid://bovjpdr0k6psd" path="res://scripts/red_organ.gd" id="2_fjlvv"]
+[ext_resource type="Script" path="res://scripts/red_organ.gd" id="2_fjlvv"]
 [ext_resource type="PackedScene" uid="uid://bthqkxn20mj0j" path="res://scenes/enemies/FuseBox.tscn" id="4_o34q2"]
 [ext_resource type="PackedScene" uid="uid://ji4gv8j0xc37" path="res://art/glbtf/door.glb" id="5_rdsj4"]
 
