@@ -99,8 +99,9 @@ func show_sequence():
 	show_doorethy_dialogue("Your turn. Don't embarrass yourself.")
 
 func check_input(color: String):
-	if not is_player_turn or is_showing_sequence:
-		print("Not your turn!")
+	# Critical FIX: Don't process input if not in player turn, showing sequence, or game is over
+	if not is_player_turn or is_showing_sequence or current_round > 10:
+		print("Input ignored - not player's turn or game over")
 		return
 	
 	print("Player selected: ", color)
@@ -110,9 +111,15 @@ func check_input(color: String):
 	unglow_organ(color)
 	
 	player_sequence.append(color)
-	
+	# Safety FIX: Prevent out-of-bounds access, player can spam buzz
 	var step = player_sequence.size() - 1
+	if step >= current_sequence.size():
+		print("Warning: Player clicked too many times!")
+		return
+		
 	if color != current_sequence[step]:
+		# Implies, player made a mistake, thus, Immediately stop accepting input
+		is_player_turn = false  
 		if current_round == 9:
 			show_doorethy_dialogue("HAHAHAHA! You were SO CLOSE! Round 9! Back to Round 1, loser!")
 		else:
@@ -122,6 +129,8 @@ func check_input(color: String):
 		return
 	
 	if player_sequence.size() == current_sequence.size():
+		# Implies, player won, thus, no need to ask for user input
+		is_player_turn = false
 		if current_round == 10:
 			show_doorethy_dialogue("Ugh... FINE. I suppose you ARE cultured. You may pass.")
 			await get_tree().create_timer(2.0).timeout
