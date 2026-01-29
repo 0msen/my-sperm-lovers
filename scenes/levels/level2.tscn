@@ -307,9 +307,6 @@ navigation_mesh = SubResource("NavigationMesh_f3b2k")
 [node name="Valve" parent="." instance=ExtResource("18_yhrca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9511347, 0, -2.8899436)
 
-[node name="Valve2" parent="." instance=ExtResource("18_yhrca")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9754057, 0, -4.6091404)
-
 [node name="Valve3" parent="." instance=ExtResource("18_yhrca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.19, 0, -2.849)
 
