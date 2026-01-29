@@ -1,16 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://valve_puzzle_scene"]
+[gd_scene load_steps=12 format=3 uid="uid://valve_puzzle_scene"]
 
 [ext_resource type="Script" path="res://scripts/valve.gd" id="1_valve"]
 [ext_resource type="PackedScene" path="res://scenes/ui/valve_progress_bar_3d.tscn" id="2_progress"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_valve"]
-albedo_color = Color(0.8, 0.2, 0.2, 1)
+[sub_resource type="StandardMaterial3D" id="Material_pipe"]
+albedo_color = Color(0.6, 0.45, 0.25, 1)
+metallic = 0.7
+roughness = 0.4
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_valve"]
-top_radius = 0.3
-bottom_radius = 0.4
-height = 0.6
-material = SubResource("StandardMaterial3D_valve")
+[sub_resource type="StandardMaterial3D" id="Material_wheel"]
+albedo_color = Color(0.8, 0.2, 0.2, 1)
+metallic = 0.5
+roughness = 0.3
+
+[sub_resource type="CylinderMesh" id="Mesh_pipe"]
+top_radius = 0.35
+bottom_radius = 0.35
+height = 1.2
+material = SubResource("Material_pipe")
+
+[sub_resource type="CylinderMesh" id="Mesh_stem"]
+top_radius = 0.12
+bottom_radius = 0.15
+height = 0.5
+material = SubResource("Material_pipe")
+
+[sub_resource type="TorusMesh" id="Mesh_wheel"]
+inner_radius = 0.25
+outer_radius = 0.35
+material = SubResource("Material_wheel")
+
+[sub_resource type="CylinderMesh" id="Mesh_spoke"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 0.5
+material = SubResource("Material_wheel")
+
+[sub_resource type="CylinderMesh" id="Mesh_hub"]
+top_radius = 0.08
+bottom_radius = 0.08
+height = 0.1
+material = SubResource("Material_wheel")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_valve"]
 radius = 1.5
@@ -19,9 +49,31 @@ height = 2.0
 [node name="Valve" type="Node3D"]
 script = ExtResource("1_valve")
 
-[node name="Mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
-mesh = SubResource("CylinderMesh_valve")
+[node name="PipeBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0.35, 0)
+mesh = SubResource("Mesh_pipe")
+
+[node name="Stem" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = SubResource("Mesh_stem")
+
+[node name="WheelHandle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+
+[node name="Wheel" type="MeshInstance3D" parent="WheelHandle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("Mesh_wheel")
+
+[node name="Hub" type="MeshInstance3D" parent="WheelHandle"]
+mesh = SubResource("Mesh_hub")
+
+[node name="Spoke1" type="MeshInstance3D" parent="WheelHandle"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = SubResource("Mesh_spoke")
+
+[node name="Spoke2" type="MeshInstance3D" parent="WheelHandle"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0)
+mesh = SubResource("Mesh_spoke")
 
 [node name="InteractionArea" type="Area3D" parent="."]
 collision_layer = 0

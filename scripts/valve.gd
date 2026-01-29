@@ -23,8 +23,12 @@ var player_ref: Node3D = null
 
 # --- Nodes ---
 @onready var interaction_area: Area3D = $InteractionArea
-@onready var mesh: MeshInstance3D = $Mesh
 @onready var progress_bar: Node3D = get_node_or_null("ProgressBar3D")
+# Wheel handle parts (for color change)
+@onready var wheel: MeshInstance3D = get_node_or_null("WheelHandle/Wheel")
+@onready var hub: MeshInstance3D = get_node_or_null("WheelHandle/Hub")
+@onready var spoke1: MeshInstance3D = get_node_or_null("WheelHandle/Spoke1")
+@onready var spoke2: MeshInstance3D = get_node_or_null("WheelHandle/Spoke2")
 
 func _ready() -> void:
 	add_to_group("valves")
@@ -111,20 +115,35 @@ func _on_body_exited(body: Node3D) -> void:
 		print("[Valve] Player left range")
 
 func _update_visuals() -> void:
-	# Update mesh color based on state
-	if mesh and mesh.get_surface_override_material(0):
-		var mat = mesh.get_surface_override_material(0) as StandardMaterial3D
-		if mat:
-			if is_completed:
-				mat.albedo_color = Color.GREEN
-			elif is_being_used:
-				mat.albedo_color = Color.YELLOW
-			else:
-				mat.albedo_color = Color.RED
+	# Determine color based on state
+	var color: Color
+	if is_completed:
+		color = Color.GREEN
+	elif is_being_used:
+		color = Color.YELLOW
+	else:
+		color = Color(0.8, 0.2, 0.2, 1)  # Red
+
+	# Update wheel handle parts color
+	_set_mesh_color(wheel, color)
+	_set_mesh_color(hub, color)
+	_set_mesh_color(spoke1, color)
+	_set_mesh_color(spoke2, color)
 
 	# Update progress bar if exists
 	if progress_bar and progress_bar.has_method("set_progress"):
 		progress_bar.set_progress(progress)
+
+func _set_mesh_color(mesh_node: MeshInstance3D, color: Color) -> void:
+	if not mesh_node:
+		return
+	# Get or create material override
+	var mat = mesh_node.get_surface_override_material(0)
+	if not mat:
+		mat = mesh_node.mesh.surface_get_material(0).duplicate() as StandardMaterial3D
+		mesh_node.set_surface_override_material(0, mat)
+	if mat:
+		mat.albedo_color = color
 
 # Called by external scripts to check if valve is active (for sperm attraction)
 func is_active() -> bool:
