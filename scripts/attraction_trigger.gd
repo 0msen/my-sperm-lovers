@@ -14,7 +14,7 @@ func _on_body_entered(body: Node3D) -> void:
 		print("[AttractionTrigger] Sperm ", body.name, " entered - starting attraction")
 
 func _on_body_exited(body: Node3D) -> void:
-	if body.is_in_group("sperm") and body.has_method("stop_attraction_to_toilet"):
-		# Optional: you might want to keep them attracted even after exiting
-		# body.stop_attraction_to_toilet()
-		print("[AttractionTrigger] Sperm ", body.name, " exited attraction zone")
+	# Sperms stay attracted even after leaving the trigger zone
+	# This is intentional - they should keep moving toward the elevator
+	if body.is_in_group("sperm"):
+		print("[AttractionTrigger] Sperm ", body.name, " exited - still attracted")
