@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cprologue12345"]
+[gd_scene load_steps=3 format=3 uid="uid://cl4cbaj36tp73"]
 
 [ext_resource type="Script" path="res://scripts/prologue.gd" id="1_script"]
 
@@ -62,7 +62,7 @@ theme_override_colors/default_color = Color(0.87, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
 
 [node name="Panel" type="Panel" parent="CanvasLayer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 180)
+custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
