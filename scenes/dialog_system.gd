@@ -5,7 +5,7 @@ extends Control
 
 @onready var name_label: RichTextLabel = $DialogBox/NameLabel
 @onready var text_label: RichTextLabel = $DialogBox/TextLabel
-@onready var typing_sound: AudioStreamPlayer = $DialogBox/typing_sound
+@onready var typing_sound: AudioStreamPlayer = $ControlNode/DialogBox/typing_sound
 
 var _last_visible_chars := 0
 signal dialogue_started
@@ -106,6 +106,7 @@ func _pick_random_line(value) -> Dictionary:
 			return {}
 		
 		# Start from the first valid index (instead of random)
+		# This prevents skipping early lines unintentionally
 		var start_idx = valid_indices[0]
 		var first = value[start_idx].duplicate()
 		first["__array__"] = value
@@ -123,27 +124,27 @@ func _show_line(line: Dictionary, from_key: String = "") -> void:
 	text_label.visible_characters = 0
 	_last_visible_chars = 0
 	set_process(true)
-	
+
 func _process(delta: float) -> void:
-	var total := text_label.get_total_character_count()
-	if text_label.visible_characters >= total:
+	if text_label.visible_characters >= text_label.get_total_character_count():
 		set_process(false)
 		return
-
-	var prev_chars := text_label.visible_characters
-
-	# advance text
-	text_label.visible_characters += int(delta * text_speed) + 1
+	
+	var total = text_label.get_total_character_count()
+	var chars_per_sec = text_speed
+	text_label.visible_characters += int(delta * chars_per_sec) + 1
 	text_label.visible_characters = mini(text_label.visible_characters, total)
-
-	for i in range(prev_chars, text_label.visible_characters):
-		var char := text_label.text[i]
-
+# play typing sound only if new characters appeared
+	
+	if text_label.visible_characters > _last_visible_chars:
+		var char_index = text_label.visible_characters - 1
+		var char := text_label.text[char_index]
+		
 		if char != " " and char != "\n":
 			typing_sound.pitch_scale = randf_range(0.97, 1.03)
 			typing_sound.play()
-	
-			
+		
+		_last_visible_chars = text_label.visible_characters
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible: return
 	if not event.is_action_pressed("shoot"): return

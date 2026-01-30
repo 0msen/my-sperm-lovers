@@ -1,6 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6sr2w4xbnhs6"]
+[gd_scene load_steps=13 format=3 uid="uid://c6sr2w4xbnhs6"]
 
 [ext_resource type="Script" uid="uid://3gmosgfcxbfx" path="res://scripts/dialog_system.gd" id="1_30pih"]
+[ext_resource type="Script" path="res://scenes/dialog_box.gd" id="2_7myk8"]
+[ext_resource type="AudioStream" uid="uid://o5yydleiv1sj" path="res://sounds/computer-mouse-click-352734 (1)-[AudioTrimmer.com].mp3" id="2_oj4fm"]
+[ext_resource type="FontFile" uid="uid://cu8c206j00117" path="res://VCR_OSD_MONO_1.001.ttf" id="3_y08h8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4bxt"]
+bg_color = Color(0.3019608, 0.08235294, 0.06666667, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skqg8"]
+bg_color = Color(0.12716489, 0.12716489, 0.12716489, 0.5176471)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y08h8"]
+bg_color = Color(0.3019608, 0.08235294, 0.06666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="FontVariation" id="FontVariation_p4bxt"]
+
+[sub_resource type="FontVariation" id="FontVariation_skqg8"]
+
+[sub_resource type="FontVariation" id="FontVariation_o7dfd"]
+
+[sub_resource type="FontVariation" id="FontVariation_2h4a4"]
+
+[sub_resource type="FontVariation" id="FontVariation_y08h8"]
 
 [node name="DialogSystem" type="CanvasLayer"]
 editor_description = "refer to the sript of the SecetZone sa test_level.tscn, naa dadto gi pag pag gamit ani na scene/tool
@@ -21,41 +69,85 @@ script = ExtResource("1_30pih")
 jsonsrc = "res://art/dialogSystem/dialog_content.json"
 metadata/_edit_use_anchors_ = true
 
+[node name="Panel" type="Panel" parent="ControlNode"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 248.0
+offset_right = 576.0
+offset_bottom = 368.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p4bxt")
+
 [node name="DialogBox" type="Panel" parent="ControlNode"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 43.6
-anchor_top = 6.225
-anchor_right = 43.6
+anchor_left = 43.675
+anchor_top = 6.125
+anchor_right = 43.675
 anchor_bottom = 6.225
 offset_left = -1679.0
 offset_top = 11.0
 offset_right = -1179.0
 offset_bottom = 111.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_skqg8")
+script = ExtResource("2_7myk8")
 metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="ControlNode/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16600001
+anchor_top = 0.120000005
+anchor_right = 0.16600001
+anchor_bottom = 0.120000005
+offset_left = 85.663994
+offset_top = 3.5200071
+offset_right = 253.664
+offset_bottom = 35.27193
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1488209
+theme_override_styles/panel = SubResource("StyleBoxFlat_y08h8")
+
+[node name="typing_sound" type="AudioStreamPlayer" parent="ControlNode/DialogBox"]
+stream = ExtResource("2_oj4fm")
+volume_db = -17.68
+pitch_scale = 2.01
+max_polyphony = 8
 
 [node name="NameLabel" type="RichTextLabel" parent="ControlNode/DialogBox"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.33
-anchor_top = -0.02
-anchor_right = 0.33
-anchor_bottom = -0.02
-offset_left = -160.0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.855
+anchor_top = -0.231
+anchor_right = 0.855
+anchor_bottom = -0.07692308
+offset_left = -408.08002
+offset_top = 16.023993
+offset_right = -240.08002
+offset_bottom = 47.999992
+theme_override_fonts/normal_font = ExtResource("3_y08h8")
+theme_override_fonts/bold_font = SubResource("FontVariation_p4bxt")
+theme_override_fonts/bold_italics_font = SubResource("FontVariation_skqg8")
+theme_override_fonts/italics_font = SubResource("FontVariation_o7dfd")
+theme_override_fonts/mono_font = SubResource("FontVariation_2h4a4")
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 15
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" type="RichTextLabel" parent="ControlNode/DialogBox"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.658
-anchor_top = 0.41
-anchor_right = 0.658
-anchor_bottom = 0.41
-offset_left = -329.0
+anchor_left = 0.49389514
+anchor_top = 0.33653846
+anchor_right = 0.5322581
+anchor_bottom = 0.69200003
+offset_left = -180.97198
 offset_top = -11.0
-offset_right = 171.0
-offset_bottom = 29.0
+offset_right = 168.0
+offset_bottom = 16.031998
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_y08h8")
+theme_override_font_sizes/normal_font_size = 18
+scroll_active = false
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
