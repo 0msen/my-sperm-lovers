@@ -15,6 +15,7 @@ signal puzzle_completed
 @onready var CORRECT: AudioStreamPlayer = $Correct
 @onready var CHEER: AudioStreamPlayer = $Cheer
 @onready var LAUGH: AudioStreamPlayer = $Laugh
+@onready var trigger_zone: Area3D = $TriggerZone
 
 var current_sequence = []
 var player_sequence = []
@@ -22,6 +23,7 @@ var current_round = 0
 var is_showing_sequence = false
 var is_player_turn = false
 var game_ended: bool = false  # True if door opened (by puzzle OR violence)
+var game_has_started: bool = false   # ← prevents multiple triggers after player won
 
 func _ready():
 	# Initialize all organs to show normal, hide glow
@@ -38,9 +40,21 @@ func _ready():
 		fuse_box.destroyed.connect(_on_fuse_box_destroyed)
 		print("FuseBox Door now connected")
 	
+	if trigger_zone:
+		trigger_zone.body_entered.connect(_on_trigger_zone_body_entered)
+		print("Trigger zone connected")
+	
 	print("Simon Says initialized!")
-	await get_tree().create_timer(1.0).timeout
-	start_game()
+
+func _on_trigger_zone_body_entered(body: Node3D) -> void:
+	if game_ended: return
+	if game_has_started: return 
+		
+	if body.is_in_group("player"):
+		print("Player entered trigger zone → starting Simon Says")
+		game_has_started = true
+		start_game()
+
 
 func glow_organ(color: String):
 	var organ = organs[color]
@@ -179,6 +193,7 @@ func _on_fuse_box_destroyed() -> void:
 	is_player_turn = false
 	is_showing_sequence = false
 	
+	await get_tree().create_timer(1.0).timeout
 	dialog_system.start_dialogue("DorrethyL4_game6")
 	await dialog_system.dialogue_finished
 	

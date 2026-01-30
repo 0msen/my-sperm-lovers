@@ -133,9 +133,14 @@
 ],
 
 "DoorethyL4_Game0": [
+  { "name": "Doorethy", "text": "Well Hello there mr wiggly guy!" },
+  { "name": "Doorethy", "text": "Quite an interesting place for such place eyh~? :3" },
+  { "name": "Doorethy", "text": "You know..." },
+  { "name": "Doorethy", "text": "You know..." },
+
   { "name": "Doorethy", "text": "ALL RIGHT PEOPLE~~! <3" },
   { "name": "Doorethy", "text": "LET THE GAMEEE......" },
-  { "name": "Doorethy", "text": "START NA~~ ^^!" }
+  { "name": "Doorethy", "text": "START~~ ^^!" }
 ],
 
 "DoorethyL4_Game1": {
@@ -188,6 +193,70 @@
   { "name": "Doorethy", "text": "But next time, you’re gonna pay for this." }
 ],
 
+"DoorethyL4_game7": [
+  { "name": "Doorethy", "text": "Well hello wiggly thing~! It's you again!" },
+  { "name": "Doorethy", "text": "Can't believe you actually escaped that very greeny, slimy, headache-inducing place… :000" },
+  { "name": "Doorethy", "text": "The place works properly now—all thanks to you! YAY XD" },
+  { "name": "Doorethy", "text": "Putting boxes… or putting corpses to ease your life… ganuns ganuns talaga, eyh? Hehe~" },
+  { "name": "Doorethy", "text": "I'm pretty damn sure you chose to stack those cute little boxes like a good wiggly boy, right? :3 <3", "karma": { "min": 1.0 } },
+  { "name": "Doorethy", "text": "I'm pretty damn sure you left a trail of innocent worker corpses just to make things easier, didn't you? </3", "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "But who caaaares really?? ;p" },
+  { "name": "Doorethy", "text": "What matters is you're here now~ Still swimming! Still breathing! Still… causing chaos~" },
+  { "name": "Doorethy", "text": "And still killing everything in your path, hmm? </3", "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "Anywayyyysss~~~" },
+  { "name": "Doorethy", "text": "After this silly chat… it's gonna be the last level, kay?" },
+  { "name": "Doorethy", "text": "Your actual business—the real reason you're wiggling through all this mess—should be waiting there. ^^" },
+  { "name": "Doorethy", "text": "So… Imma delete myself now!" },
+  { "name": "Doorethy", "text": "Oh wait—there's gonna be another Doorethy up ahead, probably ready to block you or judge you or something dramatic." },
+  { "name": "Doorethy", "text": "Well…" },
+  { "name": "Doorethy", "text": "Not my problem! Tehe~! :pp" }
+],
+
+"DoorethyL4_Game8": [
+  { "name": "Doorethy", "text": "Well hellooo there, mr. wiggly guy!" },
+  { "name": "Doorethy", "text": "You actually showed up… in THIS place :3" },
+  { "name": "Doorethy", "text": "Look at it… the place makes no sense right??? ... ><" },
+  { "name": "Doorethy", "text": "I bet you’re already regretting every life choice that led you here, hehe." },
+  { "name": "Doorethy", "text": "You know…" },
+  { "name": "Doorethy", "text": "You knooowww…" },
+  { "name": "Doorethy", "text": "I could just leave you here to slowly dissolve into glitter particles…", "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "…but you’ve been kinda cute about the whole ‘surviving so far’ thing, so maybe I’ll be nice. For now.", "karma": { "min": 1.0 } },
+  { "name": "Doorethy", "text": "Anywayyyysss~~~" },
+  { "name": "Doorethy", "text": "I’ve prepared something extra special just for you po~" },
+  { "name": "Doorethy", "text": "A TV Show!!! YAY YAY <333" },
+  { "name": "Doorethy", "text": "Oh right... You guys don't know it yet." },
+  { "name": "Doorethy", "text": "………" },
+  { "name": "Doorethy", "text": "But I know you know it right? ;) tehe!" },
+  { "name": "Doorethy", "text": "Hehe. You ready, wiggly disaster?" },
+  { "name": "Doorethy", "text": "ALL RIGHT EVERYBODYYYYY~~! <3<3<3" },
+  { "name": "Doorethy", "text": "LET THE GAMEEEEE…………" },
+  { "name": "Doorethy", "text": "START!! ~~ ^^!!!" }
+],
+
+"DoorethyL4_Game9": [
+  { "name": "Doorethy", "text": "Uhhhmm..." },
+  { "name": "Doorethy", "text": "you should talk to the other Doorethy ahead.." },
+  { "name": "Doorethy", "text": "She's... waiting. Kinda crazy..." },
+  { "name": "Doorethy", "text": "Toodles dawg." }
+],
+
+"DoorethyL4_DoorAgain": [
+  { "name": "Doorethy", "text": "Sighing now… there’s a door again, eyh? :(" },
+  { "name": "Doorethy", "text": "Are you really have such a slow attention span??? </3", "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "And with all your killings too… </3" , "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "Are you just that slow, wiggly guy?? Uhuhuhu ToT" , "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "Well… accept it! Hmmp!" },
+  { "name": "Doorethy", "text": "...." },
+  { "name": "Doorethy", "text": "I know you are good! I know that…", "karma": { "min": 1.0 } },
+  { "name": "Doorethy", "text": "Errr… the game is almost done… huhuhu" },
+  { "name": "Doorethy", "text": "This may be the last time we talk na…" },
+  { "name": "Doorethy", "text": "Kinda makes me sad :((" },
+  { "name": "Doorethy", "text": "I mean… you wiggled all the way here. Through green slime and floating nonsense and everything." },
+  { "name": "Doorethy", "text": "Even if you were a bit… messy… sometimes… </3", "karma": { "max": -0.1 } },
+  { "name": "Doorethy", "text": "Anywayyyysss~~~" },
+  { "name": "Doorethy", "text": "Imma disappear quickly now (｡•́︿•̀｡)" }
+],
+
 "DoorethyEnding_Bad": [
 	{ "name": "Doorethy", "text": ":0000 WHAT IS THAT!!@!@???" },
 	{ "name": "Doorethy", "text": "KILLL THAT THING!!!!@!@!@" },
@@ -204,8 +273,8 @@
 ],
 
 "MonsterEnding_Bad": [
-	{ "name": "Doorethy", "text": "ITSSS YOUUUUUUUU" },
-	{ "name": "Doorethy", "text": "BROTTTTHERRRRRRRR!!!!!!!" },
+	{ "name": "Monster", "text": "ITSSS YOUUUUUUUU" },
+	{ "name": "Monster", "text": "BROTTTTHERRRRRRRR!!!!!!!" },
 	{ "name": "Monster", "text": "BROTHER… WE I REMEMBER…" },
 	{ "name": "Monster", "text": "EVERY… SINGLE… MISSTEP…" },
 	{ "name": "Monster", "text": "I WE AND I WE WILL HAVE… OUR MY REVENGE!!" },

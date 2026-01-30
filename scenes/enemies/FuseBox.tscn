@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://48w0jfekexa7" path="res://sounds/01_wet-squelchy-impact-352302-PSX.wav" id="4_8v7k2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v7k2"]
-size = Vector3(2.1606445, 2.3588867, 1.66156)
+size = Vector3(2.979065, 4.2695313, 2.707057)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lu7a5"]
 radius = 1.5
@@ -15,7 +15,7 @@ radius = 1.5
 script = ExtResource("3_script")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040039063, -0.021240234, 0.18960571)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056243896, -0.36889648, -0.17895079)
 shape = SubResource("BoxShape3D_8v7k2")
 
 [node name="AttackHitbox" type="Area3D" parent="."]

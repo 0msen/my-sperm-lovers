@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://dlwygi8gwu28v"]
+[gd_scene load_steps=28 format=4 uid="uid://d27u7m6dpcs84"]
 
 [ext_resource type="Script" uid="uid://4kv8f8ejgwqn" path="res://addons/TileMapLayer3D/nodes/tilemap_layer_3d.gd" id="1_up30s"]
 [ext_resource type="Script" uid="uid://bli432i5uj51v" path="res://addons/TileMapLayer3D/core/tile_creation_placement/tilemap_layer_settings.gd" id="2_4wqtj"]

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=22 format=3 uid="uid://bueloum36cejo"]
+=======
 [gd_scene load_steps=22 format=3 uid="uid://dercvg08rrooh"]
+>>>>>>> 76481b51439feb698ae3f49d774e5408f4343d04
 
 [ext_resource type="Script" uid="uid://dbk76ihl3wkx8" path="res://scripts/level_4.gd" id="1_rdsj4"]
 [ext_resource type="Script" uid="uid://c2xaendkngky8" path="res://scripts/camera_follow.gd" id="2_eh8f3"]
