@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bthqkxn20mj0j"]
+[gd_scene load_steps=6 format=3 uid="uid://bthqkxn20mj0j"]
 
 [ext_resource type="PackedScene" uid="uid://cfuy7utv00ig5" path="res://art/glbtf/Heart.fbx" id="1_5roc7"]
 [ext_resource type="PackedScene" uid="uid://chpbar3dscene" path="res://scenes/ui/hp_bar_3d.tscn" id="2_46ce0"]
+[ext_resource type="Script" path="res://scripts/fuse_box.gd" id="3_script"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8v7k2"]
 radius = 0.8417969
@@ -11,6 +12,7 @@ height = 2.6513672
 radius = 1.5
 
 [node name="FuseBox" type="StaticBody3D" groups=["enemies"]]
+script = ExtResource("3_script")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_8v7k2")

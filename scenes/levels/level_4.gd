@@ -6,12 +6,14 @@ extends Node3D
 	"green": get_node("GreenOrgan"),
 	"yellow": get_node("YellowOrgan")
 }
+@onready var fuse_box: StaticBody3D = $FuseBox
 
 var current_sequence = []
 var player_sequence = []
 var current_round = 0
 var is_showing_sequence = false
 var is_player_turn = false
+var game_ended: bool = false  # True if door opened (by puzzle OR violence)
 
 func _ready():
 	# Initialize all organs to show normal, hide glow
@@ -22,6 +24,10 @@ func _ready():
 		
 		normal_mesh.visible = true
 		glow_mesh.visible = false
+	
+	# Connect fuse box destruction signal
+	if fuse_box:
+		fuse_box.destroyed.connect(_on_fuse_box_destroyed)
 	
 	print("Simon Says initialized!")
 	await get_tree().create_timer(1.0).timeout
@@ -100,7 +106,7 @@ func show_sequence():
 
 func check_input(color: String):
 	# Critical FIX: Don't process input if not in player turn, showing sequence, or game is over
-	if not is_player_turn or is_showing_sequence or current_round > 10:
+	if not is_player_turn or is_showing_sequence or current_round > 10 or game_ended:
 		print("Input ignored - not player's turn or game over")
 		return
 	
@@ -131,6 +137,11 @@ func check_input(color: String):
 	if player_sequence.size() == current_sequence.size():
 		# Implies, player won, thus, no need to ask for user input
 		is_player_turn = false
+		
+		# Reward patience with karma (+5 per round completed)
+		if GameManager:
+			GameManager.add_karma_xp(5.0)
+		
 		if current_round == 10:
 			show_doorethy_dialogue("Ugh... FINE. I suppose you ARE cultured. You may pass.")
 			await get_tree().create_timer(2.0).timeout
@@ -152,4 +163,32 @@ func show_doorethy_dialogue(text: String):
 	print("Doorethy: ", text)
 
 func open_door():
+	if game_ended:
+		return
+	game_ended = true
 	print("Door opens! You win!")
+
+# === VIOLENCE PATH: Fuse Box Destruction ===
+func _on_fuse_box_destroyed() -> void:
+	if game_ended:
+		return
+	
+	# Stop the Simon Says game immediately
+	is_player_turn = false
+	is_showing_sequence = false
+	
+	# Doorethy's anguished response
+	show_doorethy_dialogue("AAAAARGH!! MY HEART! YOU... YOU MONSTER!")
+	await get_tree().create_timer(1.5).timeout
+	show_doorethy_dialogue("You could have just played the game... but NO... you chose VIOLENCE!")
+	await get_tree().create_timer(2.0).timeout
+	show_doorethy_dialogue("Fine! FINE! The door is open! I hope you're HAPPY, you BRUTE!")
+	await get_tree().create_timer(1.5).timeout
+	
+	# Force the door open
+	open_door_violently()
+
+func open_door_violently():
+	game_ended = true
+	print("Door FORCED open through violence!")
+	# TODO: Add door slam animation, sparks, etc.
