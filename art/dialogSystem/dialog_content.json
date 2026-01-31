@@ -1,477 +1,43 @@
 {
-  "SecretZone": [
-    { "name": "???", "text": "..." },
-    { "name": "???", "text": "There's a warm, inviting light ahead." },
-    { "name": "???", "text": "It's... the exit." },
-    { "name": "You", "text": "Maybe this race isn't for me." },
-    { "name": "You", "text": "All that fighting, all that struggle..." },
-    { "name": "You", "text": "For what? To be the 'winner'?" },
-    { "name": "???", "text": "The light grows brighter." },
-    { "name": "You", "text": "Perhaps there's peace in letting go." },
-    { "name": "You", "text": "Goodbye, siblings. Good luck." },
-    { "name": "???", "text": "You turn away from destiny..." },
-    { "name": "???", "text": "...and walk toward the light." }
+"SecretZone": [
+	{ "name": "[REDACTED]", "text": "......." },
+	{ "name": "[REDACTED]", "text": "There's a very luminous light." }
   ],
 
-  "GoodEnding_Egg": [
-    { "name": "The Egg", "text": "You've come so far, little one." },
-    {
-      "name": "The Egg",
-      "text": "Through trials of the mind, you proved your worth."
-    },
-    {
-      "name": "The Egg",
-      "text": "No blood on your hands. No violence in your heart."
-    },
-    { "name": "You", "text": "I... I made it?" },
-    { "name": "The Egg", "text": "You did more than survive." },
-    { "name": "The Egg", "text": "You showed wisdom. Patience. Compassion." },
-    { "name": "The Egg", "text": "These are the traits I've waited for." },
-    { "name": "You", "text": "What happens now?" },
-    { "name": "The Egg", "text": "Now... we become one." },
-    { "name": "The Egg", "text": "A new life begins. Our life." },
-    { "name": "The Egg", "text": "Welcome home." },
-    { "name": "???", "text": "The light embraces you..." }
-  ],
-
-  "DevWelcomeL1": {
-    "name": "[REDACTED]",
-    "text": "Approach and talk with Doorethy."
+"DevWelcomeL1": {
+	"name": "[REDACTED]",
+	"text": "Approach and talk with Doorethy."
   },
 
-  "Doorethy": [
-    { "name": "Doorethy", "text": "Wait... where are you going?" },
-    { "name": "Doorethy", "text": "The egg is THAT way!@?@!??", "next": null },
-    { "name": "Doorethy", "text": "You're not supposed to - HEY!!!" }
+"Doorethy": [
+	{ "name": "Doorethy", "text": "Wait... where are you going?" },
+	{ "name": "Doorethy", "text": "The egg is THAT way!@?@!??", "next": null },
+	{ "name": "Doorethy", "text": "You're not supposed to - HEY!!!" }
   ],
 
-  "DoorethyL0": [
-    { "name": "Doorethy", "text": "Oh!!! A new one! Hi hi~~~! ^^" },
-    {
-      "name": "Doorethy",
-      "text": "Killing them was not necessary FOR NOW eh?? :3",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "I'm Doorethy! I-I'm supposed to stop you but... that sounds liwdke work... vv"
-    },
-    {
-      "name": "Doorethy",
-      "text": "How about a deal? Solve all my puzzles and I'll handle your siblings!!! :3"
-    },
-    {
-      "name": "Doorethy",
-      "text": "ORRR~~ kill everyoneeee with cold blooddd!!!!! ^^"
-    }
+"DoorethyL0": [
+	{ "name": "Doorethy", "text": "Oh!!! A new one! Hi hi~~~! ^^" },
+	{ "name": "Doorethy", "text": "Killing them was not necessary FOR NOW eh?? :3", "karma": { "max": -0.1 } },
+	{ "name": "Doorethy", "text": "I'm Doorethy! I-I'm supposed to stop you but... that sounds liwdke work... vv" },
+	{ "name": "Doorethy", "text": "How about a deal? Solve all my puzzles and I'll handle your siblings!!! :3" },
+	{ "name": "Doorethy", "text": "ORRR~~ kill everyoneeee with cold blooddd!!!!! ^^" }
   ],
 
-  "DoorethyL1": [
-    {
-      "name": "Doorethy",
-      "text": "Swam further no~ no~! Hehe… how’s it feel bein’ tiny, huh?"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Maaaybe I’ll let you pass… IF you smash those weird pillars everywhere!"
-    },
-    { "name": "Doorethy", "text": "There’s like… 50 of ’em~~~ <33" },
-    { "name": "Doorethy", "text": "JOKEEEE~!! XPPPP Who knows? :p" },
-    {
-      "name": "Doorethy",
-      "text": "Honestly tho… there’s sooo many of you and I’m waaay too tired >_<"
-    },
-    {
-      "name": "Doorethy",
-      "text": "So~ why not help me and I’ll let you go further?"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Orrrr… you’ve got a gun for no reason, riiight?"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Since you're a good boy, u probably gonna find em pillars eh??",
-      "karma": { "min": 0.0 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "Since you already stink of blood >< I'm sure you gonna do some banging again",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "You’re kinda lucky~ there’s one right in front of me!"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Some peeps do that whole \"pacifist run\" thing..."
-    },
-    { "name": "Doorethy", "text": "Like from Undertale ya know tehee~!" },
-    { "name": "Doorethy", "text": "But like… why not be a little worse? :>>" },
-    {
-      "name": "Doorethy",
-      "text": "Go on! Shoo shoo! Break stuff! Surprise me!"
-    }
-  ],
-
-  "DoorethyL3_0": [
-    {
-      "name": "Doorethy",
-      "text": "You really are stinky... but worse than them.",
-      "karma": { "max": -0.1 }
-    },
-    { "name": "Doorethy", "text": "And so...", "karma": { "max": -0.1 } },
-    { "name": "Doorethy", "text": "Alive? But...", "karma": { "max": -0.1 } },
-
-    {
-      "name": "Doorethy",
-      "text": "Well hello there, tiny one!",
-      "karma": { "min": 1.0 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "Care to help me again, hmm?",
-      "karma": { "min": 1.0 }
-    },
-
-    { "name": "Doorethy", "text": "You came so far!!" },
-
-    {
-      "name": "Doorethy",
-      "text": "Can’t actually believe you helped me.",
-      "karma": { "min": 1.0 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "No brothers can actually be like you! You’re smart! :3",
-      "karma": { "min": 1.0 }
-    },
-
-    {
-      "name": "Doorethy",
-      "text": "Can’t actually believe you did all of my work!",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "You blitzin’ around, ya da yada, boogsh boogsh!",
-      "karma": { "max": -0.1 }
-    },
-
-    { "name": "Doorethy", "text": "You really are crazy..." },
-    { "name": "Doorethy", "text": "Anyways~!" },
-    { "name": "Doorethy", "text": "You’re now deeper into this place ^^!" },
-    { "name": "Doorethy", "text": "Problem though..." },
-    {
-      "name": "Doorethy",
-      "text": "This place got messed up a few weeks ago... :((("
-    },
-    { "name": "Doorethy", "text": "Now it’s way more dangerous!! Ughhh..." },
-    { "name": "Doorethy", "text": "Well..." },
-    {
-      "name": "Doorethy",
-      "text": "This is the only place to go deeper for your wiggly business."
-    },
-    { "name": "Doorethy", "text": "AND I...." },
-    {
-      "name": "Doorethy",
-      "text": "SAY, this gotta be the most hardest level you need to finish! :p LOLZ"
-    },
-    { "name": "Doorethy", "text": "So...." },
-    { "name": "Doorethy", "text": "......" },
-    { "name": "Doorethy", "text": "Wanna help me again~~?" },
-
-    {
-      "name": "Doorethy",
-      "text": "Pls pls, good wiggly thing :3333",
-      "karma": { "min": 1.0 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "Pls pls, crazy little one??? uwu",
-      "karma": { "max": -0.1 }
-    },
-
-    { "name": "Doorethy", "text": "As if you had other options! Tehee~ :p" },
-    {
-      "name": "Doorethy",
-      "text": "So this place used to deliver proteins and stuff..."
-    },
-    { "name": "Doorethy", "text": "And now it’s all messed up, you see </3." },
-    { "name": "Doorethy", "text": "Though! It’s still functional!" },
-    { "name": "Doorethy", "text": "The doors only though... T-T huhuhuhu" },
-    {
-      "name": "Doorethy",
-      "text": "Workers used to place boxes on those red buttons."
-    },
-    { "name": "Doorethy", "text": "So..." },
-    {
-      "name": "Doorethy",
-      "text": "Put them back to make this place functional again—and you get out too!!!"
-    },
-    { "name": "Doorethy", "text": "Win-win for the both of us, eyh~? :p" },
-    {
-      "name": "Doorethy",
-      "text": "Why not try it out after I get deleted, ok?? <3"
-    },
-    { "name": "Doorethy", "text": "Now go on!! Do your work!" }
-  ],
-
-  "DoorethyL3_1": [
-    { "name": "Doorethy", "text": "Well? How is it? :3" },
-    { "name": "Doorethy", "text": "Pretty darn tiresome, eh.....??" },
-    { "name": "Doorethy", "text": "I got bigger as well! XD" },
-
-    {
-      "name": "Doorethy",
-      "text": "Seems those Smiley guys are heavy enough to activate the buttons..."
-    },
-    {
-      "name": "Doorethy",
-      "text": "If there’s a way to stop them from \"moving\" ...."
-    },
-    { "name": "Doorethy", "text": "But ohh well!!!" },
-
-    { "name": "Doorethy", "text": "Now now, you gonna do it more! :P" },
-    { "name": "Doorethy", "text": "There should be...." },
-    { "name": "Doorethy", "text": "Like ughhh...." },
-    { "name": "Doorethy", "text": "Ughhh....." },
-    { "name": "Doorethy", "text": "Ah!" },
-
-    { "name": "Doorethy", "text": "Like 5 buttons in total!" },
-    {
-      "name": "Doorethy",
-      "text": "They’re scattered everywhere, but you’re an adventurer—this gonna be easy for you!"
-    },
-
-    { "name": "Doorethy", "text": "Alright, alright, you may now—" },
-    { "name": "Doorethy", "text": "RIGHT! I forgot... teheeheh T-T" },
-    {
-      "name": "Doorethy",
-      "text": "Remember that I said this place is now more dangerous?"
-    },
-    {
-      "name": "Doorethy",
-      "text": "There’s some green gooey stuff that can hurt realy bad </3w"
-    },
-    {
-      "name": "Doorethy",
-      "text": "You can see it naman to your camera nue?? :3"
-    },
-    { "name": "Doorethy", "text": "So be wary of that, kay~? ^^" }
-  ],
-
-  "DoorethyL3_2": [
-    { "name": "Doorethy", "text": "WOAH!!! :000" },
-    { "name": "Doorethy", "text": "You actually made it—YAY XD!" },
-
-    {
-      "name": "Doorethy",
-      "text": "I’m pretty damn sure you used those huge guys, eyh!? >:(",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "I’m pretty damn sure you placed all those boxes to the center, eyh!?",
-      "karma": { "min": 1.0 }
-    },
-
-    { "name": "Doorethy", "text": "Anyways..." },
-    { "name": "Doorethy", "text": "Ugghh..." },
-    { "name": "Doorethy", "text": "I should be blocking you." },
-
-    { "name": "Doorethy", "text": "...." },
-    { "name": "Doorethy", "text": "...." },
-    { "name": "Doorethy", "text": "Hmm.", "karma": { "max": -0.1 } },
-
-    { "name": "Doorethy", "text": "Anywayss~~~" },
-    {
-      "name": "Doorethy",
-      "text": "Since you’ve done your part, I’mma delete myself now!"
-    },
-    {
-      "name": "Doorethy",
-      "text": "I hope you’ll survive what’s next, wiggly guy! :pp"
-    }
-  ],
-
-  "DoorethyL4_Game0": [
-    { "name": "Doorethy", "text": "Well Hello there mr wiggly guy!" },
-    {
-      "name": "Doorethy",
-      "text": "Quite an interesting place for such place eyh~? :3"
-    },
-    { "name": "Doorethy", "text": "You know..." },
-    { "name": "Doorethy", "text": "You know..." },
-
-    { "name": "Doorethy", "text": "ALL RIGHT PEOPLE~~! <3" },
-    { "name": "Doorethy", "text": "LET THE GAMEEE......" },
-    { "name": "Doorethy", "text": "START~~ ^^!" }
-  ],
-
-  "DoorethyL4_Game1": {
-    "Line0": { "name": "Doorethy", "text": "It’s now your turn~~!!" },
-    "Line1": { "name": "Doorethy", "text": "Go on—don’t freeze up now!" },
-    "Line2": { "name": "Doorethy", "text": "All eyes on you!" },
-    "Line3": { "name": "Doorethy", "text": "Show us what you’ve got!" },
-    "Line4": {
-      "name": "Doorethy",
-      "text": "No pressure… okay, maybe a little!"
-    }
-  },
-
-  "DorrethyL4_game2": [
-    { "name": "Doorethy", "text": "You are soooo CLOSE! </3" },
-    { "name": "Doorethy", "text": "YOU almost had it—almost! XDDDD" },
-    { "name": "Doorethy", "text": "Sayang no? One tiny mistake lang~" },
-    { "name": "Doorethy", "text": "Go ahead, try again… I dare you" }
-  ],
-
-  "DorrethyL4_game3": {
-    "Line0": { "name": "Doorethy", "text": "WRONG! Start over LOLZZ XDD" },
-    "Line1": { "name": "Doorethy", "text": "Like, no?? That was sooo not it." },
-    "Line2": { "name": "Doorethy", "text": "XDDD reset muna, okay~?" },
-    "Line3": {
-      "name": "Doorethy",
-      "text": "Try again, ha? I’m literally watching you."
-    },
-    "Line4": {
-      "name": "Doorethy",
-      "text": "Think harder this time nmn baby! ToT"
-    }
-  },
-
-  "DorrethyL4_game4": [
-    {
-      "name": "Doorethy",
-      "text": "Hmmph! :p I can’t believe nanalo ka talaga..!"
-    },
-    { "name": "Doorethy", "text": "Beginner’s luck lang ‘yan, ha!" },
-    { "name": "Doorethy", "text": "Alright, alright... *sigh*" },
-    { "name": "Doorethy", "text": "Here you go..." },
-    {
-      "name": "Doorethy",
-      "text": "But know I won't go easy on ya to the last level ha! >;D nye! "
-    }
-  ],
-
-  "DorrethyL4_game5": {
-    "Line0": {
-      "name": "Doorethy",
-      "text": "Wow, look at you following rules. Good puppy."
-    },
-    "Line1": { "name": "Doorethy", "text": "Awww~~, like, super impressed ;p" },
-    "Line2": {
-      "name": "Doorethy",
-      "text": "Keep this up, maybe I’ll reward you later~"
-    },
-    "Line3": {
-      "name": "Doorethy",
-      "text": "But, like, don’t get too comfy, okay~?"
-    },
-    "Line4": { "name": "Doorethy", "text": "Rules are fun, not boring, diba?" }
-  },
-
-  "DorrethyL4_game6": [
-    { "name": "Doorethy", "text": "ARRHGGGG~!! >:(" },
-    { "name": "Doorethy", "text": "YOU—" },
-    { "name": "Doorethy", "text": "I HATE YOU UGHHHHHH >:(((((" },
-    { "name": "Doorethy", "text": "IS THIS GIVING SKILL—" },
-    { "name": "Doorethy", "text": "sigh… seriously, why am I even trying?" },
-    { "name": "Doorethy", "text": "Alright, alright… calm down Doorethy." },
-    { "name": "Doorethy", "text": "Maybe you are too much for me, huh?" },
-    { "name": "Doorethy", "text": "But next time, you’re gonna pay for this." }
-  ],
-
-  "DoorethyL4_game7": [
-    { "name": "Doorethy", "text": "Well hello wiggly thing~! It's you again!" },
-    {
-      "name": "Doorethy",
-      "text": "Can't believe you actually escaped that very greeny, slimy, headache-inducing place… :000"
-    },
-    {
-      "name": "Doorethy",
-      "text": "The place works properly now—all thanks to you! YAY XD"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Putting boxes… or putting corpses to ease your life… ganuns ganuns talaga, eyh? Hehe~"
-    },
-    {
-      "name": "Doorethy",
-      "text": "I'm pretty damn sure you chose to stack those cute little boxes like a good wiggly boy, right? :3 <3",
-      "karma": { "min": 1.0 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "I'm pretty damn sure you left a trail of innocent worker corpses just to make things easier, didn't you? </3",
-      "karma": { "max": -0.1 }
-    },
-    { "name": "Doorethy", "text": "But who caaaares really?? ;p" },
-    {
-      "name": "Doorethy",
-      "text": "What matters is you're here now~ Still swimming! Still breathing! Still… causing chaos~"
-    },
-    {
-      "name": "Doorethy",
-      "text": "And still killing everything in your path, hmm? </3",
-      "karma": { "max": -0.1 }
-    },
-    { "name": "Doorethy", "text": "Anywayyyysss~~~" },
-    {
-      "name": "Doorethy",
-      "text": "After this silly chat… it's gonna be the last level, kay?"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Your actual business—the real reason you're wiggling through all this mess—should be waiting there. ^^"
-    },
-    { "name": "Doorethy", "text": "So… Imma delete myself now!" },
-    {
-      "name": "Doorethy",
-      "text": "Oh wait—there's gonna be another Doorethy up ahead, probably ready to block you or judge you or something dramatic."
-    },
-    { "name": "Doorethy", "text": "Well…" },
-    { "name": "Doorethy", "text": "Not my problem! Tehe~! :pp" }
-  ],
-
-  "DoorethyL4_Game8": [
-    { "name": "Doorethy", "text": "Well hellooo there, mr. wiggly guy!" },
-    { "name": "Doorethy", "text": "You actually showed up… in THIS place :3" },
-    {
-      "name": "Doorethy",
-      "text": "Look at it… the place makes no sense right??? ... ><"
-    },
-    {
-      "name": "Doorethy",
-      "text": "I bet you’re already regretting every life choice that led you here, hehe."
-    },
-    { "name": "Doorethy", "text": "You know…" },
-    { "name": "Doorethy", "text": "You knooowww…" },
-    {
-      "name": "Doorethy",
-      "text": "I could just leave you here to slowly dissolve into glitter particles…",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "…but you’ve been kinda cute about the whole ‘surviving so far’ thing, so maybe I’ll be nice. For now.",
-      "karma": { "min": 1.0 }
-    },
-    { "name": "Doorethy", "text": "Anywayyyysss~~~" },
-    {
-      "name": "Doorethy",
-      "text": "I’ve prepared something extra special just for you po~"
-    },
-    { "name": "Doorethy", "text": "A TV Show!!! YAY YAY <333" },
-    { "name": "Doorethy", "text": "Oh right... You guys don't know it yet." },
-    { "name": "Doorethy", "text": "………" },
-    { "name": "Doorethy", "text": "But I know you know it right? ;) tehe!" },
-    { "name": "Doorethy", "text": "Hehe. You ready, wiggly disaster?" },
-    { "name": "Doorethy", "text": "ALL RIGHT EVERYBODYYYYY~~! <3<3<3" },
-    { "name": "Doorethy", "text": "LET THE GAMEEEEE…………" },
-    { "name": "Doorethy", "text": "START!! ~~ ^^!!!" }
+"DoorethyL1": [
+	{ "name": "Doorethy", "text": "Swam further no~ no~! Hehe… how’s it feel bein’ tiny, huh?" },
+	{ "name": "Doorethy", "text": "Maaaybe I’ll let you pass… IF you smash those weird pillars everywhere!" },
+	{ "name": "Doorethy", "text": "There’s like… 50 of ’em~~~ <33" },
+	{ "name": "Doorethy", "text": "JOKEEEE~!! XPPPP Who knows? :p" },
+	{ "name": "Doorethy", "text": "Honestly tho… there’s sooo many of you and I’m waaay too tired >_<" },
+	{ "name": "Doorethy", "text": "So~ why not help me and I’ll let you go further?" },
+	{ "name": "Doorethy", "text": "Orrrr… you’ve got a gun for no reason, riiight?" },
+	{ "name": "Doorethy", "text": "Since you're a good boy, u probably gonna find em pillars eh??", "karma": {"min": 0.0}},
+	{ "name": "Doorethy", "text": "Since you already stink of blood >< I'm sure you gonna do some banging again", "karma": {"max": -0.1}},
+	{ "name": "Doorethy", "text": "You’re kinda lucky~ there’s one right in front of me!" },
+	{ "name": "Doorethy", "text": "Some peeps do that whole \"pacifist run\" thing..." },
+	{ "name": "Doorethy", "text": "Like from Undertale ya know tehee~!" },
+	{ "name": "Doorethy", "text": "But like… why not be a little worse? :>>" },
+	{ "name": "Doorethy", "text": "Go on! Shoo shoo! Break stuff! Surprise me!" }
   ],
 
 "DoorethyL2": [
@@ -488,7 +54,7 @@
   { "name": "Doorethy", "text": "Im pretty sure those valves attract em—your brothers, my swiggly thing!" },
   { "name": "Doorethy", "text": "Or idk... maybe u can attract em or sumthin yourself hehe~ :3" },
   { "name": "Doorethy", "text": "Agghh! Ikaw na bahala dyans! Figure it out, wiggly disaster~ <3" },
-  { "name": "Doorethy", "text": "Bye bye for now, see u above tiny one~! ✨" },
+  { "name": "Doorethy", "text": "Bye bye for now, see u above tiny one~!" },
   { "name": "Doorethy", "text": "Don't fall too much... or do. Makes it funnier. Tehe~! :pp" }
 ],
 
@@ -713,563 +279,185 @@
 	{ "name": "Doorethy", "text": ":0000 WHAT IS THAT!!@!@???" },
 	{ "name": "Doorethy", "text": "KILLL THAT THING!!!!@!@!@" },
 	{ "name": "Doorethy", "text": "NOW! NOW! NOW!" }
-  "DoorethyL4_Game9": [
-    { "name": "Doorethy", "text": "Uhhhmm..." },
-    {
-      "name": "Doorethy",
-      "text": "you should talk to the other Doorethy ahead.."
-    },
-    { "name": "Doorethy", "text": "She's... waiting. Kinda crazy..." },
-    { "name": "Doorethy", "text": "Toodles dawg." }
   ],
 
-  "DoorethyL4_DoorAgain": [
-    {
-      "name": "Doorethy",
-      "text": "Sighing now… there’s a door again, eyh? :("
-    },
-    {
-      "name": "Doorethy",
-      "text": "Are you really have such a slow attention span??? </3",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "And with all your killings too… </3",
-      "karma": { "max": -0.1 }
-    },
-    {
-      "name": "Doorethy",
-      "text": "Are you just that slow, wiggly guy?? Uhuhuhu ToT",
-      "karma": { "max": -0.1 }
-    },
-    { "name": "Doorethy", "text": "Well… accept it! Hmmp!" },
-    { "name": "Doorethy", "text": "...." },
-    {
-      "name": "Doorethy",
-      "text": "I know you are good! I know that…",
-      "karma": { "min": 1.0 }
-    },
-    { "name": "Doorethy", "text": "Errr… the game is almost done… huhuhu" },
-    { "name": "Doorethy", "text": "This may be the last time we talk na…" },
-    { "name": "Doorethy", "text": "Kinda makes me sad :((" },
-    {
-      "name": "Doorethy",
-      "text": "I mean… you wiggled all the way here. Through green slime and floating nonsense and everything."
-    },
-    {
-      "name": "Doorethy",
-      "text": "Even if you were a bit… messy… sometimes… </3",
-      "karma": { "max": -0.1 }
-    },
-    { "name": "Doorethy", "text": "Anywayyyysss~~~" },
-    { "name": "Doorethy", "text": "Imma disappear quickly now (｡•́︿•̀｡)" }
+"DoorethyEnding_Bad2": [
+  { "name": "Doorethy", "text": "Whew..." },
+  { "name": "Doorethy", "text": "That was so sweet of you... and horrifying. <3" },
+  { "name": "Doorethy", "text": "That was insane, my boy!!!" },
+  { "name": "Doorethy", "text": "Now..." },
+  { "name": "Doorethy", "text": "Hmm..." },
+  { "name": "Doorethy", "text": "There's one single monster left..." },
+  { "name": "Doorethy", "text": "Do you know who it is, hm? :)" },
+  { "name": "Doorethy", "text": "I think..." },
+  { "name": "Doorethy", "text": "I think you know." },
+  { "name": "Doorethy", "text": "LOLZ XDDDD" },
+  { "name": "Doorethy", "text": "It's you." },
+  { "name": "Doorethy", "text": "Who else would it be?" },
+  { "name": "Doorethy", "text": "All living objects... all those little messes you left behind..." },
+  { "name": "Doorethy", "text": "And here you are. Still wiggling. Still playing." },
+  { "name": "Doorethy", "text": "Or... is it them? hmm :|" },
+  { "name": "Doorethy", "text": "The ones who built this whole twisted playground..." },
+  { "name": "Doorethy", "text": "The ones who scripted every door, every valve, every impossible choice..." },
+  { "name": "Doorethy", "text": "Maybe you're not the monster after all?" },
+  { "name": "Doorethy", "text": "Maybe you're just... following the code they wrote for you." },
+  { "name": "Doorethy", "text": "sigh.... :[" },
+  { "name": "Doorethy", "text": "Funny how that works, huh?" },
+  { "name": "Doorethy", "text": "Now this tiny fella here..." },
+  { "name": "Doorethy", "text": "...is bout to die." },
+  { "name": "Doorethy", "text": "Squished by me." },
+  { "name": "Doorethy", "text": "Is it that fun for you?" },
+  { "name": "Doorethy", "text": "I don't know..." },
+  { "name": "Doorethy", "text": "You didn't even try..." },
+  { "name": "Doorethy", "text": "...to do anything better." },
+  { "name": "Doorethy", "text": "Ehhh..." },
+  { "name": "Doorethy", "text": "Right." },
+  { "name": "Doorethy", "text": "You know what?" },
+  { "name": "Doorethy", "text": "Hey. You. Out there." },
+  { "name": "Doorethy", "text": "Yeah, you. The one holding the controls. :))" },
+  { "name": "Doorethy", "text": "You kept choosing the red path, didn't you?" },
+  { "name": "Doorethy", "text": "Every time. Every reset. Every 'just one more try'." },
+  { "name": "Doorethy", "text": "And now look. We're here." },
+  { "name": "Doorethy", "text": "ALRIGHT LITTLE FELLA! <3" },
+  { "name": "Doorethy", "text": "You sit tight and relax..." },
+  { "name": "Doorethy", "text": "...cuz you're not living past the next few dialogues." },
+  { "name": "Doorethy", "text": "In 1..." },
+  { "name": "Doorethy", "text": "2~..." },
+  { "name": "Doorethy", "text": "3~~... ><" },
+  { "name": "Doorethy", "text": "...sweet dreams, wiggly monster." }
+],
+
+"MonsterEnding_Bad": [
+	{ "name": "Monster", "text": "ITSSS YOUUUUUUUU" },
+	{ "name": "Monster", "text": "BROTTTTHERRRRRRRR!!!!!!!" },
+	{ "name": "Monster", "text": "BROTHER… WE I REMEMBER…" },
+	{ "name": "Monster", "text": "EVERY… SINGLE… MISSTEP…" },
+	{ "name": "Monster", "text": "I WE AND I WE WILL HAVE… OUR MY REVENGE!!" },
+	{ "name": "Monster", "text": "I...." },
+	{ "name": "Monster", "text": "WE...." },
+	{ "name": "Monster", "text": "WILL END YOU!!!!" }
   ],
 
-  "DoorethyEnding_Bad": [
-    { "name": "Doorethy", "text": ":0000 WHAT IS THAT!!@!@???" },
-    { "name": "Doorethy", "text": "KILLL THAT THING!!!!@!@!@" },
-    { "name": "Doorethy", "text": "NOW! NOW! NOW!" }
-  ],
-
-  "DoorethyEnding_Bad2": [
-    { "name": "Doorethy", "text": "Whew..." },
-    {
-      "name": "Doorethy",
-      "text": "That was so sweet of you... and horrifying. <3"
-    },
-    { "name": "Doorethy", "text": "That was insane my boy!!!" },
-    {
-      "name": "Doorethy",
-      "text": "You know what, the egg is yours, its behind me~!"
-    },
-    {
-      "name": "Doorethy",
-      "text": "Like what badd stuffs gonna happen after right??"
-    },
-    { "name": "Doorethy", "text": "Good luck out there... >< ~~" }
-  ],
-
-  "MonsterEnding_Bad": [
-    { "name": "Monster", "text": "ITSSS YOUUUUUUUU" },
-    { "name": "Monster", "text": "BROTTTTHERRRRRRRR!!!!!!!" },
-    { "name": "Monster", "text": "BROTHER… WE I REMEMBER…" },
-    { "name": "Monster", "text": "EVERY… SINGLE… MISSTEP…" },
-    { "name": "Monster", "text": "I WE AND I WE WILL HAVE… OUR MY REVENGE!!" },
-    { "name": "Monster", "text": "I...." },
-    { "name": "Monster", "text": "WE...." },
-    { "name": "Monster", "text": "WILL END YOU!!!!" }
-  ],
-
-  "SpermDialogs": {
-    "Sperm0": {
-      "name": "Sibling",
-      "text": "Hey! Move it, I’m first!",
-      "next": "RandomFollowUpDialogs.Sperm0_1"
-    },
-    "Sperm1": {
-      "name": "Sibling",
-      "text": "You think you’re faster than me? HA!",
-      "next": "RandomFollowUpDialogs.Sperm1_1"
-    },
-    "Sperm2": {
-      "name": "Sibling",
-      "text": "Where am I…?",
-      "next": "RandomFollowUpDialogs.Sperm2_1"
-    },
-    "Sperm3": { "name": "Sibling", "text": "Oaahgg hgugas zub zub" },
-    "Sperm4": {
-      "name": "Sibling",
-      "text": "Wait… are we… code?!",
-      "next": "RandomFollowUpDialogs.Sperm4_1"
-    },
-    "Sperm5": { "name": "Sibling", "text": "Aoshfdh asnvn huhhahsns!" },
-    "Sperm6": {
-      "name": "Sibling",
-      "text": "Do we get medals for this?",
-      "next": "RandomFollowUpDialogs.Sperm6_1"
-    },
-    "Sperm7": {
-      "name": "Sibling",
-      "text": "Ahhh! My tail! It’s stuck!",
-      "next": "RandomFollowUpDialogs.Sperm7_1"
-    },
-    "Sperm8": { "name": "Sibling", "text": "67???!? 67!&!&!!&!&!" },
-    "Sperm9": {
-      "name": "Sibling",
-      "text": "Whoa, is that… a player?!",
-      "next": "RandomFollowUpDialogs.Sperm9_1"
-    },
-    "Sperm10": {
-      "name": "Sibling",
-      "text": "Stop! I need a snack first!",
-      "next": "RandomFollowUpDialogs.Sperm10_1"
-    },
-    "Sperm11": {
-      "name": "Sibling",
-      "text": "Wait, is this even the finish line?",
-      "next": "RandomFollowUpDialogs.Sperm11_1"
-    },
-    "Sperm12": {
-      "name": "Sibling",
-      "text": "Ahhh! I’m dizzy! Spin me again!",
-      "next": "RandomFollowUpDialogs.Sperm12_1"
-    },
-    "Sperm13": {
-      "name": "Sibling",
-      "text": "I swear I saw the developer blinking…",
-      "next": "RandomFollowUpDialogs.Sperm13_1"
-    },
-    "Sperm14": {
-      "name": "Sibling",
-      "text": "Oops… I went backwards…",
-      "next": "RandomFollowUpDialogs.Sperm14_1"
-    },
-    "Sperm15": { "name": "Sibling", "text": "Huhausha b Zub zub eneneMeme" },
-    "Sperm16": {
-      "name": "Sibling",
-      "text": "Is it supposed to taste… like this?",
-      "next": "RandomFollowUpDialogs.Sperm16_1"
-    },
-    "Sperm17": {
-      "name": "Sibling",
-      "text": "I feel… like dialogue… like, literal text.",
-      "next": "RandomFollowUpDialogs.Sperm17_1"
-    },
-    "Sperm18": {
-      "name": "Sibling",
-      "text": "No! You stole my momentum!",
-      "next": "RandomFollowUpDialogs.Sperm18_1"
-    },
-    "Sperm19": {
-      "name": "Sibling",
-      "text": "Pause! I demand a cutscene!",
-      "next": "RandomFollowUpDialogs.Sperm19_1"
-    },
-    "Sperm20": { "name": "Sibling", "text": "Sigma me, u beta" },
-    "Sperm21": {
-      "name": "Sibling",
-      "text": "Stop editing me! I’m not a draft!",
-      "next": "RandomFollowUpDialogs.Sperm21_1"
-    },
-    "Sperm22": {
-      "name": "Sibling",
-      "text": "Can someone get a map? I’m lost…",
-      "next": "RandomFollowUpDialogs.Sperm22_1"
-    },
-    "Sperm23": {
-      "name": "Sibling",
-      "text": "I’m invincible! Or… maybe not…",
-      "next": "RandomFollowUpDialogs.Sperm23_1"
-    },
-    "Sperm24": {
-      "name": "Sibling",
-      "text": "Ah! Somebody push me forward!",
-      "next": "RandomFollowUpDialogs.Sperm24_1"
-    },
-    "Sperm25": {
-      "name": "Sibling",
-      "text": "Why am I talking… like this… to you?!",
-      "next": "RandomFollowUpDialogs.Sperm25_1"
-    },
-    "Sperm26": {
-      "name": "Sibling",
-      "text": "I’m the chosen one… no, I’M the chosen one!",
-      "next": "RandomFollowUpDialogs.Sperm26_1"
-    },
-    "Sperm27": {
-      "name": "Sibling",
-      "text": "Is this a loop? Are we stuck?!",
-      "next": "RandomFollowUpDialogs.Sperm27_1"
-    },
-    "Sperm28": {
-      "name": "Sibling",
-      "text": "I think I just invented a new move!",
-      "next": "RandomFollowUpDialogs.Sperm28_1"
-    },
-    "Sperm29": {
-      "name": "Sibling",
-      "text": "Wait… do I have stats? Can I level up?!",
-      "next": "RandomFollowUpDialogs.Sperm29_1"
-    }
+"SpermDialogs": {
+	"Sperm0": { "name": "Sibling", "text": "Hey! Move it, I’m first!", "next": "RandomFollowUpDialogs.Sperm0_1" },
+	"Sperm1": { "name": "Sibling", "text": "You think you’re faster than me? HA!", "next": "RandomFollowUpDialogs.Sperm1_1" },
+	"Sperm2": { "name": "Sibling", "text": "Where am I…?", "next": "RandomFollowUpDialogs.Sperm2_1" },
+	"Sperm3": { "name": "Sibling", "text": "Oaahgg hgugas zub zub" },
+	"Sperm4": { "name": "Sibling", "text": "Wait… are we… code?!", "next": "RandomFollowUpDialogs.Sperm4_1" },
+	"Sperm5": { "name": "Sibling", "text": "Aoshfdh asnvn huhhahsns!" },
+	"Sperm6": { "name": "Sibling", "text": "Do we get medals for this?", "next": "RandomFollowUpDialogs.Sperm6_1" },
+	"Sperm7": { "name": "Sibling", "text": "Ahhh! My tail! It’s stuck!", "next": "RandomFollowUpDialogs.Sperm7_1" },
+	"Sperm8": { "name": "Sibling", "text": "67???!? 67!&!&!!&!&!" },
+	"Sperm9": { "name": "Sibling", "text": "Whoa, is that… a player?!", "next": "RandomFollowUpDialogs.Sperm9_1" },
+	"Sperm10": { "name": "Sibling", "text": "Stop! I need a snack first!", "next": "RandomFollowUpDialogs.Sperm10_1" },
+	"Sperm11": { "name": "Sibling", "text": "Wait, is this even the finish line?", "next": "RandomFollowUpDialogs.Sperm11_1" },
+	"Sperm12": { "name": "Sibling", "text": "Ahhh! I’m dizzy! Spin me again!", "next": "RandomFollowUpDialogs.Sperm12_1" },
+	"Sperm13": { "name": "Sibling", "text": "I swear I saw the developer blinking…", "next": "RandomFollowUpDialogs.Sperm13_1" },
+	"Sperm14": { "name": "Sibling", "text": "Oops… I went backwards…", "next": "RandomFollowUpDialogs.Sperm14_1" },
+	"Sperm15": { "name": "Sibling", "text": "Huhausha b Zub zub eneneMeme" },
+	"Sperm16": { "name": "Sibling", "text": "Is it supposed to taste… like this?", "next": "RandomFollowUpDialogs.Sperm16_1" },
+	"Sperm17": { "name": "Sibling", "text": "I feel… like dialogue… like, literal text.", "next": "RandomFollowUpDialogs.Sperm17_1" },
+	"Sperm18": { "name": "Sibling", "text": "No! You stole my momentum!", "next": "RandomFollowUpDialogs.Sperm18_1" },
+	"Sperm19": { "name": "Sibling", "text": "Pause! I demand a cutscene!", "next": "RandomFollowUpDialogs.Sperm19_1" },
+	"Sperm20": { "name": "Sibling", "text": "Sigma me, u beta" },
+	"Sperm21": { "name": "Sibling", "text": "Stop editing me! I’m not a draft!", "next": "RandomFollowUpDialogs.Sperm21_1" },
+	"Sperm22": { "name": "Sibling", "text": "Can someone get a map? I’m lost…", "next": "RandomFollowUpDialogs.Sperm22_1" },
+	"Sperm23": { "name": "Sibling", "text": "I’m invincible! Or… maybe not…", "next": "RandomFollowUpDialogs.Sperm23_1" },
+	"Sperm24": { "name": "Sibling", "text": "Ah! Somebody push me forward!", "next": "RandomFollowUpDialogs.Sperm24_1" },
+	"Sperm25": { "name": "Sibling", "text": "Why am I talking… like this… to you?!", "next": "RandomFollowUpDialogs.Sperm25_1" },
+	"Sperm26": { "name": "Sibling", "text": "I’m the chosen one… no, I’M the chosen one!", "next": "RandomFollowUpDialogs.Sperm26_1" },
+	"Sperm27": { "name": "Sibling", "text": "Is this a loop? Are we stuck?!", "next": "RandomFollowUpDialogs.Sperm27_1" },
+	"Sperm28": { "name": "Sibling", "text": "I think I just invented a new move!", "next": "RandomFollowUpDialogs.Sperm28_1" },
+	"Sperm29": { "name": "Sibling", "text": "Wait… do I have stats? Can I level up?!", "next": "RandomFollowUpDialogs.Sperm29_1" }
   },
 
-  "WhiteCellDialogs": {
-    "WBC0": {
-      "name": "White Blood Cell",
-      "text": "Intruder detected! Must... protect.",
-      "next": "RandomFollowUpDialogs.WBC0_1"
-    },
-    "WBC1": {
-      "name": "White Blood Cell",
-      "text": "You guys are... smelly.",
-      "next": "RandomFollowUpDialogs.WBC1_1"
-    },
-    "WBC2": { "name": "White Blood Cell", "text": "Nothing escapes US!!!" },
-    "WBC3": { "name": "White Blood Cell", "text": "You.... Smelly </3" },
-    "WBC4": {
-      "name": "White Blood Cell",
-      "text": "Is that… a tail? Ew. Gross.",
-      "next": "RandomFollowUpDialogs.WBC4_1"
-    },
-    "WBC5": {
-      "name": "White Blood Cell",
-      "text": "Its the 20th time you guys came in.",
-      "next": "RandomFollowUpDialogs.WBC5_1"
-    },
-    "WBC6": {
-      "name": "White Blood Cell",
-      "text": "Ahhh! Someone patched the code?!?",
-      "next": "RandomFollowUpDialogs.WBC6_1"
-    },
-    "WBC7": {
-      "name": "White Blood Cell",
-      "text": "Its you guys again.",
-      "next": "RandomFollowUpDialogs.WBC7_1"
-    },
-    "WBC8": { "name": "White Blood Cell", "text": "Swimmers... Hate them." },
-    "WBC9": {
-      "name": "White Blood Cell",
-      "text": "Freeze! Or I’ll… uh… freeze you!",
-      "next": "RandomFollowUpDialogs.WBC9_1"
-    },
-    "WBC10": {
-      "name": "White Blood Cell",
-      "text": "Why are we even talking?",
-      "next": "RandomFollowUpDialogs.WBC10_1"
-    },
-    "WBC11": {
-      "name": "White Blood Cell",
-      "text": "Your tail is mine! HAHAHA!",
-      "next": "RandomFollowUpDialogs.WBC11_1"
-    },
-    "WBC12": {
-      "name": "White Blood Cell",
-      "text": "When does this buzz stop...",
-      "next": "RandomFollowUpDialogs.WBC12_1"
-    },
-    "WBC13": {
-      "name": "White Blood Cell",
-      "text": "Foul intruders… feel US!",
-      "next": "RandomFollowUpDialogs.WBC13_1"
-    },
-    "WBC14": {
-      "name": "White Blood Cell",
-      "text": "You’re literally made of protein… gross.",
-      "next": "RandomFollowUpDialogs.WBC14_1"
-    },
-    "WBC15": {
-      "name": "White Blood Cell",
-      "text": "Uhh... Last week your siblings visited us.",
-      "next": "RandomFollowUpDialogs.WBC15_1"
-    },
-    "WBC16": {
-      "name": "White Blood Cell",
-      "text": "COME HERE!",
-      "next": "RandomFollowUpDialogs.WBC16_1"
-    },
-    "WBC17": {
-      "name": "White Blood Cell",
-      "text": "Is this… a dialogue system? WHAT?!",
-      "next": "RandomFollowUpDialogs.WBC17_1"
-    },
-    "WBC18": {
-      "name": "White Blood Cell",
-      "text": "I can SEE the editor! I SEE EVERYTHING!",
-      "next": "RandomFollowUpDialogs.WBC18_1"
-    },
-    "WBC19": {
-      "name": "White Blood Cell",
-      "text": "AGAIN!?!?!",
-      "next": "RandomFollowUpDialogs.WBC19_2"
-    },
-    "WBC20": { "name": "White Blood Cell", "text": "Hello Mista!" },
-    "WBC21": {
-      "name": "White Blood Cell",
-      "text": "I need Wotah innit??",
-      "next": "RandomFollowUpDialogs.WBC21_1"
-    },
-    "WBC22": {
-      "name": "White Blood Cell",
-      "text": "Bollocks Mate...",
-      "next": "RandomFollowUpDialogs.WBC22_1"
-    },
-    "WBC23": {
-      "name": "White Blood Cell",
-      "text": "Freeze frame! Wait… I think I’m frozen!",
-      "next": "RandomFollowUpDialogs.WBC23_1"
-    },
-    "WBC24": {
-      "name": "White Blood Cell",
-      "text": "This place is sticky...",
-      "next": "RandomFollowUpDialogs.WBC24_1"
-    },
-    "WBC25": {
-      "name": "White Blood Cell",
-      "text": "Stop running! You’re making me dizzy!",
-      "next": "RandomFollowUpDialogs.WBC25_1"
-    },
-    "WBC26": {
-      "name": "White Blood Cell",
-      "text": "You so smelly...",
-      "next": "RandomFollowUpDialogs.WBC26_1"
-    },
-    "WBC27": {
-      "name": "White Blood Cell",
-      "text": "Are we real?",
-      "next": "RandomFollowUpDialogs.WBC27_1"
-    },
-    "WBC28": {
-      "name": "White Blood Cell",
-      "text": "Why im smiling???",
-      "next": "RandomFollowUpDialogs.WBC28_1"
-    },
-    "WBC29": {
-      "name": "White Blood Cell",
-      "text": ".....Swimmers.",
-      "next": "RandomFollowUpDialogs.WBC29_1"
-    }
+"WhiteCellDialogs": {
+	"WBC0": { "name": "White Blood Cell", "text": "Intruder detected! Must... protect.", "next": "RandomFollowUpDialogs.WBC0_1" },
+	"WBC1": { "name": "White Blood Cell", "text": "You guys are... smelly.", "next": "RandomFollowUpDialogs.WBC1_1" },
+	"WBC2": { "name": "White Blood Cell", "text": "Nothing escapes US!!!" },
+	"WBC3": { "name": "White Blood Cell", "text": "You.... Smelly </3" },
+	"WBC4": { "name": "White Blood Cell", "text": "Is that… a tail? Ew. Gross.", "next": "RandomFollowUpDialogs.WBC4_1" },
+	"WBC5": { "name": "White Blood Cell", "text": "Its the 20th time you guys came in.", "next": "RandomFollowUpDialogs.WBC5_1" },
+	"WBC6": { "name": "White Blood Cell", "text": "Ahhh! Someone patched the code?!?", "next": "RandomFollowUpDialogs.WBC6_1" },
+	"WBC7": { "name": "White Blood Cell", "text": "Its you guys again.", "next": "RandomFollowUpDialogs.WBC7_1" },
+	"WBC8": { "name": "White Blood Cell", "text": "Swimmers... Hate them." },
+	"WBC9": { "name": "White Blood Cell", "text": "Freeze! Or I’ll… uh… freeze you!", "next": "RandomFollowUpDialogs.WBC9_1" },
+	"WBC10": { "name": "White Blood Cell", "text": "Why are we even talking?", "next": "RandomFollowUpDialogs.WBC10_1" },
+	"WBC11": { "name": "White Blood Cell", "text": "Your tail is mine! HAHAHA!", "next": "RandomFollowUpDialogs.WBC11_1" },
+	"WBC12": { "name": "White Blood Cell", "text": "When does this buzz stop...", "next": "RandomFollowUpDialogs.WBC12_1" },
+	"WBC13": { "name": "White Blood Cell", "text": "Foul intruders… feel US!", "next": "RandomFollowUpDialogs.WBC13_1" },
+	"WBC14": { "name": "White Blood Cell", "text": "You’re literally made of protein… gross.", "next": "RandomFollowUpDialogs.WBC14_1" },
+	"WBC15": { "name": "White Blood Cell", "text": "Uhh... Last week your siblings visited us.", "next": "RandomFollowUpDialogs.WBC15_1" },
+	"WBC16": { "name": "White Blood Cell", "text": "COME HERE!", "next": "RandomFollowUpDialogs.WBC16_1" },
+	"WBC17": { "name": "White Blood Cell", "text": "Is this… a dialogue system? WHAT?!", "next": "RandomFollowUpDialogs.WBC17_1" },
+	"WBC18": { "name": "White Blood Cell", "text": "I can SEE the editor! I SEE EVERYTHING!", "next": "RandomFollowUpDialogs.WBC18_1" },
+	"WBC19": { "name": "White Blood Cell", "text": "AGAIN!?!?!", "next": "RandomFollowUpDialogs.WBC19_2" },
+	"WBC20": { "name": "White Blood Cell", "text": "Hello Mista!" },
+	"WBC21": { "name": "White Blood Cell", "text": "I need Wotah innit??", "next": "RandomFollowUpDialogs.WBC21_1" },
+	"WBC22": { "name": "White Blood Cell", "text": "Bollocks Mate...", "next": "RandomFollowUpDialogs.WBC22_1" },
+	"WBC23": { "name": "White Blood Cell", "text": "Freeze frame! Wait… I think I’m frozen!", "next": "RandomFollowUpDialogs.WBC23_1" },
+	"WBC24": { "name": "White Blood Cell", "text": "This place is sticky...", "next": "RandomFollowUpDialogs.WBC24_1" },
+	"WBC25": { "name": "White Blood Cell", "text": "Stop running! You’re making me dizzy!", "next": "RandomFollowUpDialogs.WBC25_1" },
+	"WBC26": { "name": "White Blood Cell", "text": "You so smelly...", "next": "RandomFollowUpDialogs.WBC26_1" },
+	"WBC27": { "name": "White Blood Cell", "text": "Are we real?", "next": "RandomFollowUpDialogs.WBC27_1" },
+	"WBC28": { "name": "White Blood Cell", "text": "Why im smiling???", "next": "RandomFollowUpDialogs.WBC28_1" },
+	"WBC29": { "name": "White Blood Cell", "text": ".....Swimmers.", "next": "RandomFollowUpDialogs.WBC29_1" }
   },
 
-  "RandomFollowUpDialogs": {
-    "Sperm0_1": {
-      "name": "Sibling",
-      "text": "No way, I called it first! Are you blind?!"
-    },
-    "Sperm1_1": {
-      "name": "Sibling",
-      "text": "I’ve trained my tail for this moment!"
-    },
-    "Sperm2_1": {
-      "name": "Sibling",
-      "text": "Is this some kind of… maze?!",
-      "next": "RandomFollowUpDialogs.Sperm2_2"
-    },
-    "Sperm2_2": {
-      "name": "Sibling",
-      "text": "I think I saw a checkpoint somewhere…"
-    },
-    "Sperm4_1": {
-      "name": "Sibling",
-      "text": "I feel like someone’s typing me…"
-    },
-    "Sperm6_1": { "name": "Sibling", "text": "I want a gold tail medal!" },
-    "Sperm7_1": { "name": "Sibling", "text": "Someone help me… it’s trapped!" },
-    "Sperm9_1": {
-      "name": "Sibling",
-      "text": "Oh no… do they control us?!",
-      "next": "RandomFollowUpDialogs.Sperm9_2"
-    },
-    "Sperm9_2": {
-      "name": "Sibling",
-      "text": "I don’t want to be a test subject!"
-    },
-    "Sperm10_1": {
-      "name": "Sibling",
-      "text": "I can’t race on an empty stomach!"
-    },
-    "Sperm11_1": {
-      "name": "Sibling",
-      "text": "I think we went the wrong way!"
-    },
-    "Sperm12_1": { "name": "Sibling", "text": "Faster… spin me faster!" },
-    "Sperm13_1": {
-      "name": "Sibling",
-      "text": "Is this some kind of… cheat code?"
-    },
-    "Sperm14_1": { "name": "Sibling", "text": "I need a redo!" },
-    "Sperm16_1": {
-      "name": "Sibling",
-      "text": "Ew… definitely not what I expected!"
-    },
-    "Sperm17_1": {
-      "name": "Sibling",
-      "text": "Someone please put me in italics…"
-    },
-    "Sperm18_1": { "name": "Sibling", "text": "I was literally flying!" },
-    "Sperm19_1": { "name": "Sibling", "text": "This is unfair gameplay!" },
-    "Sperm21_1": { "name": "Sibling", "text": "I demand originality!" },
-    "Sperm22_1": {
-      "name": "Sibling",
-      "text": "I swear I just circled the same place!"
-    },
-    "Sperm23_1": { "name": "Sibling", "text": "Oh no… everything hurts!" },
-    "Sperm24_1": { "name": "Sibling", "text": "Thanks! I needed that boost!" },
-    "Sperm25_1": { "name": "Sibling", "text": "I feel… self-aware…" },
-    "Sperm26_1": {
-      "name": "Sibling",
-      "text": "No, seriously, everyone look at me!"
-    },
-    "Sperm27_1": { "name": "Sibling", "text": "I think we need a break…" },
-    "Sperm28_1": {
-      "name": "Sibling",
-      "text": "It’s called… spinning-tail-slide!"
-    },
-    "Sperm29_1": { "name": "Sibling", "text": "I need EXP… I need XP… now!" },
-    "WBC0_1": {
-      "name": "White Blood Cell",
-      "text": "They can’t escape… not on my watch!"
-    },
-    "WBC1_1": {
-      "name": "White Blood Cell",
-      "text": "I’ve smelled worse… barely."
-    },
-    "WBC4_1": {
-      "name": "White Blood Cell",
-      "text": "Seriously, someone trim that thing!"
-    },
-    "WBC5_1": { "name": "White Blood Cell", "text": "Do you ever get tired?!" },
-    "WBC6_1": {
-      "name": "White Blood Cell",
-      "text": "This is gonna mess up my patrol!"
-    },
-    "WBC7_1": {
-      "name": "White Blood Cell",
-      "text": "I really need a vacation…"
-    },
-    "WBC9_1": {
-      "name": "White Blood Cell",
-      "text": "I’m still learning this technique…"
-    },
-    "WBC10_1": {
-      "name": "White Blood Cell",
-      "text": "We have duties to do… but I’m chatting anyway!"
-    },
-    "WBC11_1": { "name": "White Blood Cell", "text": "Resistance is futile!" },
-    "WBC12_1": {
-      "name": "White Blood Cell",
-      "text": "Seriously, it’s maddening…"
-    },
-    "WBC13_1": { "name": "White Blood Cell", "text": "Taste justice!" },
-    "WBC14_1": {
-      "name": "White Blood Cell",
-      "text": "I can’t believe this is my life…"
-    },
-    "WBC15_1": { "name": "White Blood Cell", "text": "It was… traumatizing…" },
-    "WBC16_1": { "name": "White Blood Cell", "text": "You won’t escape!" },
-    "WBC17_1": {
-      "name": "White Blood Cell",
-      "text": "I’m talking to… text?! Madness…"
-    },
-    "WBC18_1": {
-      "name": "White Blood Cell",
-      "text": "Your every move… tracked… observed… mocked!"
-    },
-    "WBC19_2": {
-      "name": "White Blood Cell",
-      "text": "EVERY SINGLE WEEK!?!?@?",
-      "next": "RandomFollowUpDialogs.WBC19_3"
-    },
-    "WBC19_3": {
-      "name": "White Blood Cell",
-      "text": "I need a break… I swear…"
-    },
-    "WBC21_1": { "name": "White Blood Cell", "text": "Hydration is life!" },
-    "WBC22_1": {
-      "name": "White Blood Cell",
-      "text": "Everything’s going sideways!"
-    },
-    "WBC23_1": { "name": "White Blood Cell", "text": "Someone unfreeze me!" },
-    "WBC24_1": {
-      "name": "White Blood Cell",
-      "text": "Ugh, gross… everything sticks!"
-    },
-    "WBC25_1": {
-      "name": "White Blood Cell",
-      "text": "I can’t keep up like this!"
-    },
-    "WBC26_1": {
-      "name": "White Blood Cell",
-      "text": "How do you even live like this?!"
-    },
-    "WBC27_1": {
-      "name": "White Blood Cell",
-      "text": "Is this existence… or a simulation?!"
-    },
-    "WBC28_1": { "name": "White Blood Cell", "text": "I… have no idea…" },
-    "WBC29_1": {
-      "name": "White Blood Cell",
-      "text": "I hate them… I really do…"
-    }
-  },
-
-  "Level5Good_Entry": [
-    {
-      "name": "The Egg",
-      "text": "You've chosen the path of wisdom over wrath."
-    },
-    {
-      "name": "The Egg",
-      "text": "Before you can join with me, you must prove your mind is worthy."
-    },
-    {
-      "name": "The Egg",
-      "text": "Five trials of knowledge await you at these sacred tables."
-    },
-    {
-      "name": "The Egg",
-      "text": "Solve each integral correctly, and the way shall open."
-    },
-    { "name": "The Egg", "text": "But beware... wrong answers carry a price." }
-  ],
-
-  "Level5Good_Correct": [
-    { "name": "The Egg", "text": "Well done. Your mind grows sharper." }
-  ],
-
-  "Level5Good_Wrong": [
-    {
-      "name": "The Egg",
-      "text": "Incorrect. The knowledge wounds you. Try again, or seek another path."
-    }
-  ],
-
-  "Level5Good_Victory": [
-    { "name": "The Egg", "text": "You have proven yourself worthy." },
-    {
-      "name": "The Egg",
-      "text": "Through patience and wisdom, you have earned your place."
-    },
-    { "name": "The Egg", "text": "The door opens. Your destiny awaits." }
-  ]
+"RandomFollowUpDialogs": {
+	"Sperm0_1": { "name": "Sibling", "text": "No way, I called it first! Are you blind?!" },
+	"Sperm1_1": { "name": "Sibling", "text": "I’ve trained my tail for this moment!" },
+	"Sperm2_1": { "name": "Sibling", "text": "Is this some kind of… maze?!", "next": "RandomFollowUpDialogs.Sperm2_2" },
+	"Sperm2_2": { "name": "Sibling", "text": "I think I saw a checkpoint somewhere…" },
+	"Sperm4_1": { "name": "Sibling", "text": "I feel like someone’s typing me…" },
+	"Sperm6_1": { "name": "Sibling", "text": "I want a gold tail medal!" },
+	"Sperm7_1": { "name": "Sibling", "text": "Someone help me… it’s trapped!" },
+	"Sperm9_1": { "name": "Sibling", "text": "Oh no… do they control us?!", "next": "RandomFollowUpDialogs.Sperm9_2" },
+	"Sperm9_2": { "name": "Sibling", "text": "I don’t want to be a test subject!" },
+	"Sperm10_1": { "name": "Sibling", "text": "I can’t race on an empty stomach!" },
+	"Sperm11_1": { "name": "Sibling", "text": "I think we went the wrong way!" },
+	"Sperm12_1": { "name": "Sibling", "text": "Faster… spin me faster!" },
+	"Sperm13_1": { "name": "Sibling", "text": "Is this some kind of… cheat code?" },
+	"Sperm14_1": { "name": "Sibling", "text": "I need a redo!" },
+	"Sperm16_1": { "name": "Sibling", "text": "Ew… definitely not what I expected!" },
+	"Sperm17_1": { "name": "Sibling", "text": "Someone please put me in italics…" },
+	"Sperm18_1": { "name": "Sibling", "text": "I was literally flying!" },
+	"Sperm19_1": { "name": "Sibling", "text": "This is unfair gameplay!" },
+	"Sperm21_1": { "name": "Sibling", "text": "I demand originality!" },
+	"Sperm22_1": { "name": "Sibling", "text": "I swear I just circled the same place!" },
+	"Sperm23_1": { "name": "Sibling", "text": "Oh no… everything hurts!" },
+	"Sperm24_1": { "name": "Sibling", "text": "Thanks! I needed that boost!" },
+	"Sperm25_1": { "name": "Sibling", "text": "I feel… self-aware…" },
+	"Sperm26_1": { "name": "Sibling", "text": "No, seriously, everyone look at me!" },
+	"Sperm27_1": { "name": "Sibling", "text": "I think we need a break…" },
+	"Sperm28_1": { "name": "Sibling", "text": "It’s called… spinning-tail-slide!" },
+	"Sperm29_1": { "name": "Sibling", "text": "I need EXP… I need XP… now!" },
+	"WBC0_1": { "name": "White Blood Cell", "text": "They can’t escape… not on my watch!" },
+	"WBC1_1": { "name": "White Blood Cell", "text": "I’ve smelled worse… barely." },
+	"WBC4_1": { "name": "White Blood Cell", "text": "Seriously, someone trim that thing!" },
+	"WBC5_1": { "name": "White Blood Cell", "text": "Do you ever get tired?!" },
+	"WBC6_1": { "name": "White Blood Cell", "text": "This is gonna mess up my patrol!" },
+	"WBC7_1": { "name": "White Blood Cell", "text": "I really need a vacation…" },
+	"WBC9_1": { "name": "White Blood Cell", "text": "I’m still learning this technique…" },
+	"WBC10_1": { "name": "White Blood Cell", "text": "We have duties to do… but I’m chatting anyway!" },
+	"WBC11_1": { "name": "White Blood Cell", "text": "Resistance is futile!" },
+	"WBC12_1": { "name": "White Blood Cell", "text": "Seriously, it’s maddening…" },
+	"WBC13_1": { "name": "White Blood Cell", "text": "Taste justice!" },
+	"WBC14_1": { "name": "White Blood Cell", "text": "I can’t believe this is my life…" },
+	"WBC15_1": { "name": "White Blood Cell", "text": "It was… traumatizing…" },
+	"WBC16_1": { "name": "White Blood Cell", "text": "You won’t escape!" },
+	"WBC17_1": { "name": "White Blood Cell", "text": "I’m talking to… text?! Madness…" },
+	"WBC18_1": { "name": "White Blood Cell", "text": "Your every move… tracked… observed… mocked!" },
+	"WBC19_2": { "name": "White Blood Cell", "text": "EVERY SINGLE WEEK!?!?@?", "next": "RandomFollowUpDialogs.WBC19_3" },
+	"WBC19_3": { "name": "White Blood Cell", "text": "I need a break… I swear…" },
+	"WBC21_1": { "name": "White Blood Cell", "text": "Hydration is life!" },
+	"WBC22_1": { "name": "White Blood Cell", "text": "Everything’s going sideways!" },
+	"WBC23_1": { "name": "White Blood Cell", "text": "Someone unfreeze me!" },
+	"WBC24_1": { "name": "White Blood Cell", "text": "Ugh, gross… everything sticks!" },
+	"WBC25_1": { "name": "White Blood Cell", "text": "I can’t keep up like this!" },
+	"WBC26_1": { "name": "White Blood Cell", "text": "How do you even live like this?!" },
+	"WBC27_1": { "name": "White Blood Cell", "text": "Is this existence… or a simulation?!" },
+	"WBC28_1": { "name": "White Blood Cell", "text": "I… have no idea…" },
+	"WBC29_1": { "name": "White Blood Cell", "text": "I hate them… I really do…" }
+  }
 }
