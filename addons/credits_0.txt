@@ -1,0 +1,35 @@
+CREDITS
+
+--- Addon ---
+"TileMapLayer3D" (https://github.com/DanTrz/TileMapLayer3D) by DanTrz is licensed under the MIT License (https://opensource.org/licenses/MIT).
+
+--- 3D Models / Assets ---
+"LOWPOLY - REMINGTON SHOTGUN - PS1 / PSX STYLE" (https://skfb.ly/oNCnC) by Colin Greenall is licensed under Creative Commons Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/).
+"PSX Air Conditioners Pack" (https://skfb.ly/pCtPN) by DeadFrame Studio is licensed under Creative Commons Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/).
+"PSX Low-poly Car - Renault" (https://skfb.ly/ptXrN) by korkskrew2000 is licensed under Creative Commons Attribution-ShareAlike 4.0 (http://creativecommons.org/licenses/by-sa/4.0/).
+"PSX Style Barricade Pack" (https://skfb.ly/p8SU6) by wooolvie is licensed under Creative Commons Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/).
+"Blind Van PSX Style" (https://skfb.ly/pxVo9) by Han66st is licensed under Creative Commons Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/).
+
+--- Fab Assets ---
+Asset from Fab (https://www.fab.com/listings/5fb90354-4591-4fb8-a893-72eba7ee0d37) is used under the license provided by Fab.
+Asset from Fab (https://www.fab.com/listings/96cccff5-f73c-4ffa-bba7-a11f24e6cf4c) is used under the license provided by Fab.
+Asset from Fab (https://www.fab.com/listings/64de4fea-7e65-4e44-b763-843d4a130f15) is used under the license provided by Fab.
+
+--- Textures / Images ---
+"Minced Meat with Spices" (https://www.freepik.com/free-photo/minced-meat-with-spices-paper-table-closeup-macro_15101074.htm) by valeria_aksakova is licensed under the Freepik License.
+"Fresh Beef Meat Steak (Macro Shot)" (https://www.freepik.com/free-photo/macro-shot-fresh-beef-meat-steak_37782118.htm) by valeria_aksakova is licensed under the Freepik License.
+"Detailed Structure Marble Natural Pattern" (https://www.freepik.com/free-photo/detailed-structure-marble-natural-pattern-background-design_19133519.htm) by benzoix is licensed under the Freepik License.
+
+--- Other Assets ---
+
+"Creepy Eyes PNG (Transparent)" (https://www.deviantart.com/unsermanemamamamaam/art/Creepy-Eyes-PNG-transparent-1103579018) by unsermanemamamamaam is used as stated on the asset page.
+"Throwaway Faces for Hard Time 3D" (https://www.reddit.com/r/mdickie/comments/1c1lvjp/throwaways_faces_i_made_for_hardtime_3d_yall_can/) by the original Reddit author is used as shared in the post.
+
+
+--- Audio Assets ---
+https://pixabay.com/sound-effects/people-crowd-cheer-406646/
+https://pixabay.com/sound-effects/film-special-effects-buzzer-227217/
+https://pixabay.com/sound-effects/film-special-effects-notification-05-140376/
+https://pixabay.com/sound-effects/people-crowd-laughing-sound-effect-no-copyright-390899/
+https://pixabay.com/sound-effects/film-special-effects-rightanswer-95219/
+
